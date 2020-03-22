@@ -1,0 +1,297 @@
+*{
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.default-color{
+    color: #32B34A;
+}
+
+.d-fs{
+  font-size: 15px;
+}
+
+.h-fs{
+  font-size: 17px;
+}
+
+.latsat-nav:link{
+    text-decoration: none;
+    color: black;
+}
+.latsat-nav:visited{
+    text-decoration: none;
+    color: black;
+}
+.latsat-nav:hover{
+    color: #32B34A;
+}
+.latsat-nav:active{
+    color: black;
+}
+.latsat-nav-pd{
+    padding: 28px 35px;
+    padding-bottom: 0 !important;
+}
+
+.latsat-nav-pd:hover>.latsat-dropdown {
+    display: block;
+  }
+
+  .latsat-nav-pd:hover>.latsat-dropdown {
+    top: auto !important;
+    left: auto !important;
+  }
+
+.latsat-dropdown.show{
+    top: auto !important;
+    left: auto !important;
+}
+
+.latsat-dropdown{
+    background: rgba(50, 179, 74, 0.952);
+}
+
+.latsat-dropdown>.dropdown-item{
+    color: #ffffff;
+    text-shadow: #000000;
+}
+.latsat-dropdown>.dropdown-item:hover{
+    color: #000000;
+}
+
+.slider {
+    width: 85%;
+    margin: auto;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #ffffff !important;
+  opacity: unset !important;
+}
+
+
+.slick-prev{
+    font-weight: bold;
+    color: #ffffff;
+    background: #32B34A !important;
+    border-radius: 50%; 
+    padding: 2.5px !important;
+}
+
+.slick-next{
+    font-weight: bold;
+    color: #ffffff;
+    background: #32B34A !important;
+    border-radius: 50%; 
+    padding: 2.5px !important;
+}
+
+.driver-card{
+    box-shadow: 0px 1px 6px 0px #32B34A;
+    background: #F8F9FA;
+    overflow: hidden;
+    height: 350px;
+  }
+
+  .meat-card{
+    box-shadow: 0px 1px 6px 0px #32B34A;
+    background: #F8F9FA;
+    overflow: hidden;
+    height: 400px;
+  }
+
+  .detail-card{
+    box-shadow: 0px 1px 6px 0px #32B34A;
+    background: #F8F9FA;
+    overflow: hidden;
+  }
+
+  .footer{
+      background-color: #F1F1F2;
+  }
+
+  .copyright{
+      background-color: #32B34A;
+  }
+
+  .lasat-about{
+    color: #58595B !important;
+  }
+  .lasat-about:link{
+    text-decoration: none;
+  }
+
+  .lasat-about:visited{
+    text-decoration: none;
+  }
+
+  .lasat-about:hover{
+    color: #32B34A !important;
+  }
+
+  .lasat-about:active{
+    text-decoration: none;
+  }
+
+  .linkmenu{
+    color: #58595B !important;
+  }
+
+  .linkmenu:link{
+    text-decoration: none;
+  }
+
+  .linkmenu:visited{
+    text-decoration: none;
+  }
+
+  .linkmenu:hover{
+    text-decoration: none;
+    color: #32B34A !important;
+  }
+
+  .linkmenu:active{
+    text-decoration: none;
+  }
+  .logotext{
+      color: #32B34A;
+      font-size: 20px;
+      font-weight: 600;
+  }
+
+  .sub{
+    border-color: rgba(47, 235, 82, 0.644);
+    width: 25px;
+  }
+
+  .plus{
+    border-color: rgba(47, 235, 82, 0.644);
+    width: 25px;
+  }
+
+  .count{
+    border-color:1px solid #32B34A;
+  }
+
+  .btn-add{
+    background-color: #32B34A;
+  }
+
+  .img-zoom{
+    display: block;
+  }
+
+  figure {
+      overflow: hidden;
+  }
+
+  .img-zoom img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.img-zoom:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+span.count {
+	padding: 1px 7px 1px 7px;
+	border-radius: 50%;
+	font-size: 12px;
+	position: relative;
+	top: -10px;
+	right: 10px;
+	color: #fff;
+	background: #32B34A !important;
+}
+
+.add:hover{
+  color: #000000 !important;
+}
+
+.check:hover{
+  color: #000000 !important;
+}
+
+.con-shop{
+  border: 1px solid #32B34A;
+}
+
+.con-shop:hover{
+  background: #32B34A;
+  color: #ffffff;
+}
+
+.s-cart button{
+  width: 2em;
+  height: 1.8em;
+  font-size: 18px;
+  color: #000000;
+  border: 1px solid #32B34A;
+  border-radius: 10%;
+  /* border-color: #E91D24 !important; */
+}
+.s-cart .count{
+  width: 5em;
+  font-size: 18px;
+  background: #ffffff;
+  color: #000000;
+}
+
+.cart-header{
+  border: 1px solid #32B34A;
+}
+
+.cart-tr{
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+@media only screen and (max-width: 600px) { 
+    .latsat-nav-pd{
+        padding: 0px 0px;
+    }
+    .mobilelogo{
+        display: block !important;
+    }
+    /* .banner{
+        padding-top: 60px !important;
+    } */
+    .mb-header-font{
+        font-size: 20px;
+    }
+
+    .mb-font{
+        font-size: 18px;
+    }
+   .mob-qlink{
+       padding-left: 0 !important;
+   }
+   .shoppingCart *{
+    font-size: small !important;
+   }
+
+   .c-shop{
+    padding-bottom: 10px;
+   }
+   .con-shop{
+     width: 50%;
+     font-size: small;
+   }
+   .check{
+     width: 50% !important;
+     font-size: small;
+   }
+ }
+/* color code - #32B34A */
