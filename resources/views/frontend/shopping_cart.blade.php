@@ -6,9 +6,11 @@
 
 <section class="shoppingCart">
     <div class="container">
-        <div class="breadcrumb mt-3" style="background: #32B34A;">
+        {{-- <div class="breadcrumb mt-3" style="background: #32B34A;">
             <h5 class="text-white font-weight-bold">Your Shopping Cart</h5>   
-        </div>
+        </div> --}}
+        <img src="/images/shopping.png" alt="product" width="100%">
+
         <h6 class="info pt-3" style="font-size:20px;text-align:right;">
             <span style="color:#32B34A">{{ $rows }}</span> products in cart</h6>
             
@@ -16,21 +18,21 @@
                 <table class="table table-borderless">
                     <thead class="cart-header">
                         <tr>
-                            <th scope="col">Product</th>
-                            <th scope="col">Name</th>
+                            <th scope="col">ပစ္စည်း</th>
+                            <th scope="col">အမည်</th>
                             <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
+                            <th scope="col">ဈေးနှုန်း</th>
+                            <th scope="col">အရေအတွက်</th>
                             <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
-                            <th scope="col">Total Price</th>
+                            <th scope="col">စုစုပေါင်းတန်ဖိုး</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -77,7 +79,7 @@
                     
                 </div>
                 <div class="col-md-2 col-xs-12 pt-2">
-                    <h6 class="info" style="font-size:18px;">Total Item Price</h6>
+                    <h6 class="info" style="font-size:18px;">ကျသင့်ငွေ</h6>
                 </div>
                 <div class="col-md-1 col-xs-12 pt-2">
                     <h6 class="info" style="font-size:18px;position:absolute;" id="totalPrice">{{ $total }}ကျပ်</h6>
@@ -85,10 +87,10 @@
             </div>
             <div class="row pt-5">
                 <div class="col-md-9 col-xs-12 c-shop">
-                    <a href="/" class="btn con-shop">Continue Shopping >> </a>
+                    <a href="/" class="btn con-shop">ဝယ်ဦးမယ် >> </a>
                 </div>
                 <div class="col-md-3 col-xs-12">
-                    <a href="/showCheckoutview" class="btn check text-white" style="width:100%;background:#32B34A;">Checkout</a>
+                    <a href="/showCheckoutview" class="btn check text-white" style="width:100%;background:#32B34A;">အော်ဒါတင်ရန်</a>
                 </div>
             </div><br><br>
         </div>

@@ -21,6 +21,18 @@
         </div>
         <div class="form-row">
             <div class="col-md-12 mb-3">
+                <label for="validationCustom01">Logo :</label>
+                <input type="file" class="form-control form-control-sm" id="validationCustom01" name="logo" style="padding-bottom: 35px" required>
+                <div class="valid-feedback">
+                    
+                </div>
+                <div class="invalid-feedback">
+                    Please Select Logo!
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-12 mb-3">
                 <label for="validationCustom01">Image :</label>
                 <input type="file" class="form-control form-control-sm" id="validationCustom01" name="image" style="padding-bottom: 35px" required>
                 <div class="valid-feedback">

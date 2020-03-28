@@ -13,6 +13,7 @@
         <tr>
             <th>No</th>
             <th>Category Name</th>
+            <th>Logo</th>
             <th>Image</th>
             <th>Actions</th>
         </tr>
@@ -30,6 +31,7 @@
         <tr>
             <td> {{ ($rno*10)+$key+1 }} </td>
             <td>{{ $category->category_name }}</td>
+            <td>{{ $category->logo }}</td>
             <td>{{ $category->image }}</td>
             <td>
                 <a href="/admin/category/{{ $category->id }}" class="btn btn-sm" style="background-color:#007BFF;color:white;">View</a>

@@ -39,6 +39,16 @@ class CategoryController extends Controller
     {
         $category = new Category();
         $category->category_name = $request->category_name;
+
+        if ($request->hasFile('logo')) {
+            $file = $request->logo;
+            $destinationPath ='uploads';
+            $file->move($destinationPath,$file->getClientOriginalName());
+            $category->logo = $file->getClientOriginalName();
+        } else {
+            $category->logo = null;
+        }
+
         if ($request->hasFile('image')) {
             $file = $request->image;
             $destinationPath ='uploads';
@@ -47,6 +57,8 @@ class CategoryController extends Controller
         } else {
             $category->image = null;
         }
+
+
         if($category->save()){
             return redirect('/admin/category');
         }
@@ -89,6 +101,15 @@ class CategoryController extends Controller
         $category = Category::find($id);
         $category->category_name = $request->category_name;
 
+        if ($request->hasFile('logo')) {
+            $file = $request->logo;
+            $destinationPath ='uploads';
+            $file->move($destinationPath,$file->getClientOriginalName());
+            $category->logo = $file->getClientOriginalName();
+        } else {
+            $category->logo =$request->oldlogo;
+        }
+
         if ($request->hasFile('img')) {
             $file = $request->img;
             $destinationPath ='uploads';
@@ -97,6 +118,7 @@ class CategoryController extends Controller
         } else {
             $category->image =$request->oldimage;
         }
+        
         if($category->save()){
             return redirect('/admin/category');
         }

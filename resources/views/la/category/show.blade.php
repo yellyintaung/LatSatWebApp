@@ -11,6 +11,10 @@
         <input type="text" class="form-control form-control-sm" value="{{ $category->category_name }}" readonly>
     </div>
     <div class="form-group">
+        <label>Logo :</label><br>
+        <img src="/uploads/{{ $category->logo}}" class="img">
+    </div>
+    <div class="form-group">
         <label>Image :</label><br>
         <img src="/uploads/{{ $category->image}}" class="img-thumbnail" width="200" height="200">
     </div>

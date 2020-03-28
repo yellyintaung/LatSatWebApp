@@ -18,7 +18,7 @@
                   <p class="card-text">
                     {{ $product->description }}
                     </p>
-                    <p class="card-text m-0 pb-1">၁{{ $product->type->type_name }} - {{ $product->price }}ကျပ်</p>
+                    <p class="card-text m-0 pb-1">{{ $product->type->type_name }} - {{ $product->price }}ကျပ်</p>
                     <h6 class="default-color font-weight-bold pt-2">အရေအတွက်</h6>
                     <div class="wrap w-100 pt-1">
                         <button type="button" id="sub" class="sub">-</button>

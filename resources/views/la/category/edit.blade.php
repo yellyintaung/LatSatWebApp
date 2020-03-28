@@ -19,6 +19,17 @@
                 </div>
             </div>
         </div>
+
+        <div class="form-group">
+            <label>Logo :</label><br>
+            <img src="/uploads/{{ $category->logo }}" id='img-upload' name="img" class="img-thumbnail">
+        </div>
+        <div class="form-group">
+            <label for="logo">Logo :</label>
+            <input type="file"  id="imgInp" name="logo" class="form-control form-control-sm" style="padding-bottom:32px;">
+            <input type="hidden" name="oldlogo" id="logo_data" value="{{ $category->logo }}">
+        </div>
+
         <div class="form-group">
             <label>Image :</label><br>
             <img src="/uploads/{{ $category->image }}" id='img-upload' name="img" class="img-thumbnail" width="200" height="200">

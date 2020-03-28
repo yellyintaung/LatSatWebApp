@@ -1,13 +1,27 @@
 *{
-    /* font-family: 'Roboto', sans-serif; */
-    font-family: 'Poppins', sans-serif;
-}
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Poppins', sans-serif;
 
+}
+.icon-logo img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.icon-logo:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 .default-color{
-    color: #32B34A;
+  color: #32B34A;
 }
 
 .d-fs{
+  font-size: 15px;
+}
+
+.b-fs{
   font-size: 15px;
 }
 
@@ -16,57 +30,57 @@
 }
 
 .latsat-nav:link{
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 .latsat-nav:visited{
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 .latsat-nav:hover{
-    color: #32B34A;
+  color: #32B34A;
 }
 .latsat-nav:active{
-    color: black;
+  color: black;
 }
 .latsat-nav-pd{
-    padding: 28px 35px;
-    padding-bottom: 0 !important;
+  padding: 25px 35px;
+  padding-bottom: 0 !important;
 }
 
 .latsat-nav-pd:hover>.latsat-dropdown {
-    display: block;
-  }
+  display: block;
+}
 
-  .latsat-nav-pd:hover>.latsat-dropdown {
-    top: auto !important;
-    left: auto !important;
-  }
+.latsat-nav-pd:hover>.latsat-dropdown {
+  top: auto !important;
+  left: auto !important;
+}
 
 .latsat-dropdown.show{
-    top: auto !important;
-    left: auto !important;
+  top: auto !important;
+  left: auto !important;
 }
 
 .latsat-dropdown{
-    background: rgba(50, 179, 74, 0.952);
+  background: rgba(50, 179, 74, 0.952);
 }
 
 .latsat-dropdown>.dropdown-item{
-    color: #ffffff;
-    text-shadow: #000000;
+  color: #ffffff;
+  text-shadow: #000000;
 }
 .latsat-dropdown>.dropdown-item:hover{
-    color: #000000;
+  color: #000000;
 }
 
 .slider {
-    width: 85%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
 .slick-slide {
-  margin: 0px 20px;
+  margin: 0px 10px;
 }
 
 .slick-slide img {
@@ -81,145 +95,140 @@
 
 
 .slick-prev{
-    font-weight: bold;
-    color: #ffffff;
-    background: #32B34A !important;
-    border-radius: 50%; 
-    padding: 2.5px !important;
+  font-weight: bold;
+  color: #ffffff;
+  background: #32B34A !important;
+  border-radius: 50%; 
+  padding: 2.5px !important;
 }
 
 .slick-next{
-    font-weight: bold;
-    color: #ffffff;
-    background: #32B34A !important;
-    border-radius: 50%; 
-    padding: 2.5px !important;
+  font-weight: bold;
+  color: #ffffff;
+  background: #32B34A !important;
+  border-radius: 50%; 
+  padding: 2.5px !important;
 }
 
 .driver-card{
-    box-shadow: 0px 1px 6px 0px #32B34A;
-    background: #F8F9FA;
-    overflow: hidden;
-    height: 350px;
-  }
+  background: #F8F9FA;
+  overflow: hidden;
+  height: 380px;
+}
 
-  .meat-card{
-    box-shadow: 0px 1px 6px 0px #32B34A;
-    background: #F8F9FA;
-    overflow: hidden;
-    height: 400px;
-  }
+.meat-card{
+  background: #F8F9FA;
+  overflow: hidden;
+  height: 400px;
+}
 
-  .detail-card{
-    box-shadow: 0px 1px 6px 0px #32B34A;
-    background: #F8F9FA;
-    overflow: hidden;
-  }
+.detail-card{
+  background: #F8F9FA;
+  overflow: hidden;
+}
 
-  .footer{
-      background-color: #F1F1F2;
-  }
+.footer{
+  background-color: #F1F1F2;
+}
 
-  .copyright{
-      background-color: #32B34A;
-  }
+.copyright{
+  background-color: #32B34A;
+}
 
-  .lasat-about{
-    color: #58595B !important;
-  }
-  .lasat-about:link{
-    text-decoration: none;
-  }
+.lasat-about{
+  color: #58595B !important;
+}
+.lasat-about:link{
+  text-decoration: none;
+}
 
-  .lasat-about:visited{
-    text-decoration: none;
-  }
+.lasat-about:visited{
+  text-decoration: none;
+}
 
-  .lasat-about:hover{
-    color: #32B34A !important;
-  }
+.lasat-about:hover{
+  color: #32B34A !important;
+}
 
-  .lasat-about:active{
-    text-decoration: none;
-  }
+.lasat-about:active{
+  text-decoration: none;
+}
 
-  .linkmenu{
-    color: #58595B !important;
-  }
+.linkmenu{
+  color: #58595B !important;
+}
 
-  .linkmenu:link{
-    text-decoration: none;
-  }
+.linkmenu:link{
+  text-decoration: none;
+}
 
-  .linkmenu:visited{
-    text-decoration: none;
-  }
+.linkmenu:visited{
+  text-decoration: none;
+}
 
-  .linkmenu:hover{
-    text-decoration: none;
-    color: #32B34A !important;
-  }
+.linkmenu:hover{
+  text-decoration: none;
+  color: #32B34A !important;
+}
 
-  .linkmenu:active{
-    text-decoration: none;
-  }
-  .logotext{
-      color: #32B34A;
-      font-size: 20px;
-      font-weight: 600;
-  }
+.linkmenu:active{
+  text-decoration: none;
+}
+.logotext{
+  color: #32B34A;
+  font-size: 20px;
+  font-weight: 600;
+}
 
-  .sub{
-    border-color: rgba(47, 235, 82, 0.644);
-    width: 25px;
-  }
+.sub{
+  /* border-color: rgba(47, 235, 82, 0.644); */
+  width: 25px;
+}
 
-  .plus{
-    border-color: rgba(47, 235, 82, 0.644);
-    width: 25px;
-  }
+.plus{
+  /* border-color: rgba(47, 235, 82, 0.644); */
+  width: 25px;
+}
 
-  .count{
-    border-color:1px solid #32B34A;
-  }
+.count{
+  border-color:1px solid #32B34A;
+}
 
-  .btn-add{
-    background-color: #32B34A;
-  }
+.btn-add{
+  background-color: #32B34A;
+}
 
-  .img-zoom{
-    display: block;
-  }
+.img-zoom{
+  display: block;
+}
 
-  figure {
-      overflow: hidden;
-  }
+figure {
+  overflow: hidden;
+}
 
-  .img-zoom img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+.img-zoom img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 .img-zoom:hover img {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 span.count {
-	padding: 1px 7px 1px 7px;
-	border-radius: 50%;
-	font-size: 12px;
-	position: relative;
-	top: -10px;
-	right: 10px;
-	color: #fff;
-	background: #32B34A !important;
+  padding: 1px 7px 1px 7px;
+  border-radius: 50%;
+  font-size: 12px;
+  position: relative;
+  top: -10px;
+  right: 10px;
+  color: #fff;
+  background: #32B34A !important;
 }
 
-.add:hover{
-  color: #000000 !important;
-}
+
 
 .check:hover{
   color: #000000 !important;
@@ -258,40 +267,174 @@ span.count {
   border-bottom: 1px solid #dee2e6 !important;
 }
 
+.mob-product{
+  position: relative;
+  display: inline-block;
+}
+
+.mob-product img{
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  color: #32B34A;
+  font-weight: bold;
+  background: #fffffff8;
+  border: 1px solid #32B34A;
+}
+
 @media only screen and (max-width: 600px) { 
-    .latsat-nav-pd{
-        padding: 0px 0px;
-    }
-    .mobilelogo{
-        display: block !important;
-    }
-    /* .banner{
-        padding-top: 60px !important;
-    } */
-    .mb-header-font{
-        font-size: 20px;
-    }
+  
+  .latsat-nav-pd{
+    padding: 0px 0px;
+  }
+  
+  .mobile-avaliable{
+    display: none;
+  }
+  
+  .mobilelogo{
+    display: inline !important;
+  }
+  
+  .mobile-view{
+    float: right;
+    flex-direction: row !important;
+    font-size: 14px;
+    padding-top: 4px;
+  }
+  
+  .latsat-nav{
+    padding-right: 1rem !important;
+  }
 
-    .mb-font{
-        font-size: 18px;
-    }
-   .mob-qlink{
-       padding-left: 0 !important;
-   }
-   .shoppingCart *{
+  .mb-img{
+    width: 20px !important;
+  }
+  
+  .mob-login{
+    padding-right: 0 !important ;
+  }
+  
+  .mb-lg{
+    display: none;
+  }
+  
+  .slider {
+    width: 86%;
+    margin: auto;
+  }
+  
+  .slick-slide {
+    margin: 0px 5px;
+  }
+  
+  .card-img-top{
+    height: 95px !important;
+  }
+  
+  .driver-card{
+    width: 100%;
+    height: 200px;
+  }
+
+  .driver-card .card-body{
+    padding: 0.7rem !important;
+  }
+
+  .meat-card{
+    width: 100%;
+    height: 255px;
+  }
+
+  .meat-card .card-body{
+    padding: 0.7rem !important;
+  }
+  
+  .mb-header-font{
+    font-size: 15px;
+    padding: 15px !important;
+  }
+  
+  .mb-font{
+    font-size: 11px !important;
+  }
+
+  .p-name{
+    margin-bottom: 5px !important;
+  }
+
+  .d-fs{
+    font-size: 10px !important;
+  }
+
+  .mob-qlink{
+    padding-left: 0 !important;
+  }
+  .shoppingCart *{
     font-size: small !important;
-   }
-
-   .c-shop{
+  }
+  
+  .c-shop{
     padding-bottom: 10px;
-   }
-   .con-shop{
-     width: 50%;
-     font-size: small;
-   }
-   .check{
-     width: 50% !important;
-     font-size: small;
-   }
- }
+  }
+  .con-shop{
+    width: 50%;
+    font-size: small;
+  }
+  .check{
+    width: 50% !important;
+    font-size: small;
+  }
+  
+  .footer{
+    font-size: 14px;
+  }
+
+  .mob-cate{
+    display: none;
+  }
+
+  .mob-catelo{
+    display: inline !important;
+  }
+
+  .mob-icon{
+    width:60px !important;
+  }
+  .mb-sec{
+    padding-top: 15px !important;
+  }
+  .logo{
+    width: 42px;
+  }
+
+  .mob-row{
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .mob-col{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .mob-sub{
+    width:20px;
+  }
+
+  .mob-add{
+    width:20px;
+  }
+
+  .b-fs{
+    font-size:8px;
+    padding:3px;
+  }
+  
+}
 /* color code - #32B34A */

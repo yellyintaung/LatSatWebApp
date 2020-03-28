@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->integer('product_id');
             $table->integer('quantity');
             $table->double('total_amount');
-            $table->integer('status');
+            $table->integer('status')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

@@ -2,11 +2,11 @@
     <div class="footer p-5 mt-4">
         <div class="container">
             <div class="row adjust"><div class="col-md-4 col-sm-3">
-            <a href="/" class="lasat-about"><img src="/images/logo.png" alt="logo" width="60px" />
-                    <span class="logotext pl-4">လတ်ဆတ်</span>
-                    <p class="pt-2 fan text-justy" style="line-height: 2;"><span>လတ်ဆတ် ကနေ Organic ကန်စွန်းရွက်၊ ပန်းဂေါ်ဖီစိမ်း၊ Red Radish ၊ ပဲတောင့်ရှည် ၊ သဘာဝကြက်ဥ ၊ ပျားရည်၊ ရှားစောင်းလက်ပတ်နဲ့ အခြားသော
-                        Chemical ကင်းစင်တဲ့ ဟင်းသီးဟင်းရွက်နဲ့ စားသောက်ကုန်တွေကို အိမ်တိုင်ရာရောက်ပို့ဆောင်ပေးနေပါပြီ။
-                        </span> </p></a> 
+            <a href="/" class="lasat-about"><img src="/images/logo.png" alt="logo" width="45px" />
+                    <span class="logotext pl-2">ဝန်ဆောင်မှုပေးနေသော မြို့နယ်များ</span></a> 
+                    <p class="pt-2 fan text-justy" style="line-height: 2;">
+                      ဗဟန်း၊ တာမွေ၊ လသာ၊ ပန်းဆိုးတန်း၊ အလုံ၊ မြေနီကုန်း၊ ကြည်မြင့်တိုင် အစရှိသည့်မြို့နယ်များတွင် ပစ္စည်းရောက်‌ငွေရှင်း စနစ်ဖြင့်မှာယူနိုင်ပါပြီ။
+                   </p>
                 </div>
                 <div class="col-md-4 col-sm-2 pt-3">
                     <div class="mob-qlink" style="padding-left: 6rem;">
@@ -21,8 +21,8 @@
                 
             
                 <div class="col-md-4 col-sm-3">
-                    <h5 class="logotext pt-3 pb-2">Facebook Link</h5>
-                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flatsatmarket%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="90%" height="320" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>    
+                    <h5 class="logotext pt-3 pb-2">Facebook Link</h5>                    
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Flatsatfood%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="320" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 </div>
                 
             </div>
@@ -31,7 +31,7 @@
         
     </div>
     <div class="copyright">
-    <p class="text-center text-white p-2 mb-0">Copyright © 2019 Spendid Inc. All rights reserved</p>
+    <p class="text-center text-white p-2 mb-0">Copyright © 2020 Latsat Food. All rights reserved</p>
    </div>
 </footer>
 
@@ -53,28 +53,28 @@
                     {
                       breakpoint: 1200,
                       settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 3,
                         slidesToScroll: 1
                       }
                     },
                     {
                       breakpoint: 1008,
                       settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         slidesToScroll: 1
                       }
                     },
                     {
                       breakpoint: 800,
                       settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         slidesToScroll: 1
                       }
                     },
                     {
                       breakpoint: 500,
                       settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         slidesToScroll: 1
                       }
                     }
