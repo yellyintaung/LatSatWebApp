@@ -198,6 +198,10 @@
   background-color: #32B34A;
 }
 
+.btn-add:hover{
+  color: #000000 !important;
+}
+
 .img-zoom{
   display: block;
 }
@@ -334,12 +338,16 @@ span.count {
   }
   
   .card-img-top{
-    height: 95px !important;
+    height: 100px !important;
+  }
+
+  .product_img{
+    height: 115px !important;
   }
   
   .driver-card{
     width: 100%;
-    height: 200px;
+    height: 220px;
   }
 
   .driver-card .card-body{
@@ -404,7 +412,7 @@ span.count {
   }
 
   .mob-icon{
-    width:60px !important;
+    width:70px !important;
   }
   .mb-sec{
     padding-top: 15px !important;

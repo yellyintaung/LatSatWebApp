@@ -21,7 +21,7 @@
             @foreach ($chunk as $item)
             <div class="col-6 col-md-3 mob-col pb-3">
                 <div class="card meat-card">
-                    <a href="/product_detail/{{ $item->id }}" class="img-zoom"><figure class="m-0"><img src="/uploads/{{ $item->product_img }}" class="card-img-top" style="width: 100%;height: 180px;" alt="..."></figure></a> 
+                    <a href="/product_detail/{{ $item->id }}" class="img-zoom"><figure class="m-0"><img src="/uploads/{{ $item->product_img }}" class="card-img-top product_img" style="width: 100%;height: 180px;" alt="..."></figure></a> 
                     <div class="card-body" style="padding-top: 0.7rem;">
                         <p class="m-0 mb-font font-weight-bold" style="font-size: 17px;">{{ $item->product_name }}</p>
                         <p class="card-text d-fs m-0 pb-1 pt-2">{{ $item->type->type_name }} - {{$item->price }}ကျပ်</p>

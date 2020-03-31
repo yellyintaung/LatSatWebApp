@@ -87,7 +87,7 @@
             </div>
             <div class="row pt-5">
                 <div class="col-md-9 col-xs-12 c-shop">
-                    <a href="/" class="btn con-shop">ဝယ်ဦးမယ် >> </a>
+                    <a href="{{ URL::previous() }}" class="btn con-shop">ဝယ်ဦးမယ် >> </a>
                 </div>
                 <div class="col-md-3 col-xs-12">
                     <a href="/showCheckoutview" class="btn check text-white" style="width:100%;background:#32B34A;">အော်ဒါတင်ရန်</a>
