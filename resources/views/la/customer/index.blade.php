@@ -14,7 +14,7 @@
             <th>No</th>
             <th>Customer Name</th>
             <th>Phone Number</th>
-            <th>Region</th>
+            {{-- <th>Region</th> --}}
             <th>Township</th>
             <th>Actions</th>
         </tr>
@@ -34,7 +34,7 @@
             <td> {{ ($cno*10)+$key+1 }} </td>
             <td>{{ $item->name }}</td>
             <td>{{ $item->phone }}</td>
-            <td>{{ $item->region }}</td>
+            {{-- <td>{{ $item->region }}</td> --}}
             <td>{{ $item->township }}</td>
             <td>
                 <a href="/admin/customer/{{ $item->id }}" class="btn btn-sm" style="background-color:#007BFF;color:white;">View</a>

@@ -291,6 +291,28 @@ span.count {
   border: 1px solid #32B34A;
 }
 
+.latsat-log{
+  color: #ffffff;
+}
+
+.latsat-log:link{
+  text-decoration: none;
+}
+
+.latsat-log:visited{
+  text-decoration: none;
+}
+
+.latsat-log:hover{
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.latsat-log:active{
+  text-decoration: none;
+}
+
+
 @media only screen and (max-width: 600px) { 
   
   .latsat-nav-pd{

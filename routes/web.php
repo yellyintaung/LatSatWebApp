@@ -11,49 +11,28 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'FrontendController@index');
 
-Route::get('/product/{id}', 'HomeController@product');
+Route::get('/product/{id}', 'FrontendController@product');
 
-Route::get('/product_detail/{id}', 'HomeController@product_detail');
+Route::get('/product_detail/{id}', 'FrontendController@product_detail');
 
-Route::get('/add_cart', 'HomeController@addCart');
+Route::get('/add_cart', 'FrontendController@addCart');
 
-Route::get('/showShoppingCartCount', 'HomeController@showCartCount');
+Route::get('/showShoppingCartCount', 'FrontendController@showCartCount');
 
-Route::get('/showShoppingCartview', 'HomeController@view');
+Route::get('/showShoppingCartview', 'FrontendController@view');
 
-Route::post('/shoppingCartdelete', 'HomeController@trash');
+Route::post('/shoppingCartdelete', 'FrontendController@trash');
 
-Route::get('/shoppingCartUpdate/{rawId}/{qty}', 'HomeController@update');
+Route::get('/shoppingCartUpdate/{rawId}/{qty}', 'FrontendController@update');
 
-Route::get('/showCheckoutview', 'HomeController@checkoutView');
+Route::get('/showCheckoutview', 'FrontendController@checkoutView');
 
-Route::post('/placeOrder', 'HomeController@placeOrder');
+Route::post('/placeOrder', 'FrontendController@placeOrder');
 
-Route::get('/admin', function()
-    {
-        return view('la.dashboard.index');
-    });
-    
-    Route::resource('/admin/category', 'Admin\CategoryController');
-    
-    Route::resource('/admin/type', 'Admin\TypeController');
-    
-    Route::resource('/admin/product', 'Admin\ProductController');
-    
-    Route::resource('/admin/customer', 'Admin\CustomerController');
-    
-    Route::resource('/admin/order', 'Admin\OrderController');
-    
-    Route::resource('/admin/payment', 'Admin\PaymentController');
+Route::get('/user_login','FrontendController@userLogin');
+Route::post('/user','FrontendController@login');
+Route::get('/user_logout','FrontendController@logout');
 
-
-Route::get('/clear', function () {
-    Artisan::call('config:cache');
-    Artisan::call('route:clear');
-    Artisan::call('config:clear');
-    Artisan::call('cache:clear');
-    Artisan::call('view:clear');
-    return '<h3>Cleared Cache Data!</h3>';
-});
+Route::get('/home', 'HomeController@index')->name('home');

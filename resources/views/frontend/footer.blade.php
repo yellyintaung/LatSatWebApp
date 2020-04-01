@@ -5,7 +5,7 @@
             <a href="/" class="lasat-about"><img src="/images/logo.png" alt="logo" width="45px" />
                     <span class="logotext pl-2">ဝန်ဆောင်မှုပေးနေသော မြို့နယ်များ</span></a> 
                     <p class="pt-2 fan text-justy" style="line-height: 2;">
-                      ဗဟန်း၊ တာမွေ၊ လသာ၊ ပန်းဆိုးတန်း၊ အလုံ၊ မြေနီကုန်း၊ ကြည်မြင့်တိုင် အစရှိသည့်မြို့နယ်များတွင် ပစ္စည်းရောက်‌ငွေရှင်း စနစ်ဖြင့်မှာယူနိုင်ပါပြီ။
+                      ကျောက်တံတား၊ ပန်းပဲတန်း၊ လသာ၊ ဗိုလ်တစ်ထောင်၊ လမ်းမတော်၊ ပုဇွန်တောင် အစရှိသည့်မြို့နယ်များတွင် ပစ္စည်းရောက်‌ငွေရှင်း စနစ်ဖြင့်မှာယူနိုင်ပါပြီ။
                    </p>
                 </div>
                 <div class="col-md-4 col-sm-2 pt-3">
@@ -42,6 +42,7 @@
 
 <script src="{{ '/js/all.js' }}"></script>
 <script src="{{ '/js/slick.js' }}"></script>
+
 
 @stack('scripts')
 <script>
@@ -103,6 +104,10 @@
     showCart();
 
 </script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
 
 </body>
 </html>

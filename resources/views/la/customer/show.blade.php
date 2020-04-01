@@ -20,10 +20,10 @@
     </div>
     
     <div class="row mb-3">
-        <div class="col-md-6">
+        {{-- <div class="col-md-6">
             <label>Region:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $customer->region }}" readonly>
-        </div>
+        </div> --}}
         
         <div class="col-md-6">
             <label>Township:</label>

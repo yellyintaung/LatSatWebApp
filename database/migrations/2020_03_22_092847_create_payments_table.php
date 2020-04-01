@@ -17,6 +17,9 @@ class CreatePaymentsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('customer_id');
             $table->double('total');
+            $table->string('want_date');
+            $table->string('time');
+            $table->integer('status')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

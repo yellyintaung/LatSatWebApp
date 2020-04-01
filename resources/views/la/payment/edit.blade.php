@@ -1,29 +1,44 @@
 @extends('la.layouts.master')
-@section('ModuleTitle','Type Edit')
-@section('contentTitle','Type')
+@section('ModuleTitle','payment Edit')
+@section('contentTitle','payment')
 @section('visiblility','hidden')
 @section('content')
 <div class="p-3">
-    <form class="needs-validation" action="/admin/type/{{ $type->id }}" method="post" enctype="multipart/form-data" novalidate>
+    <form class="needs-validation" action="/admin/payment/{{ $payment->id }}" method="post" enctype="multipart/form-data" novalidate>
         {{ csrf_field() }}
         {{ method_field('put') }}
-        <div class="form-row">
-            <div class="col-md-12 mb-3">
-                <label for="validationCustom01">Type Name:</label>
-                <input type="text" class="form-control form-control-sm" id="validationCustom01" name="type_name" value="{{ $type->type_name }}" required>
-                <div class="valid-feedback">
-
-                </div>
-                <div class="invalid-feedback">
-                    Please fill Type name!
-                </div>
+        
+        <div class="form-group">
+            <label for="">Delivery Status :</label>
+            <div class="form-check">
+                <label class="form-check-label" style="width:100%;">
+                    <div class="row">
+                        <div class="col-md-1">
+                            @if ($payment->status == 1 )
+                            <input type="radio" class="form-check-input ml-5" name="status" id="yes" value="1" checked> Done 
+                            @else
+                            <input type="radio" class="form-check-input ml-5" name="status" id="yes" value="1"> Done
+                            @endif
+                        </div>
+                        
+                        <div class="col-md-11">
+                            @if ($payment->status == 0 )
+                            <input type="radio" class="form-check-input ml-5" name="status" id="no" value="0" checked>
+                            Not Yet
+                            @else
+                            <input type="radio" class="form-check-input ml-5" name="status" id="no" value="0">
+                            Not Yet
+                            @endif
+                        </div>
+                    </div>
+                </label>
             </div>
         </div>
         
         <div class="row">
             <div class="col-md-12">
                 <button type="submit" class="btn btn-sm btn-warning float-right" style="color:black;">Update</button>
-                <a href="/admin/type" class="btn btn-sm btn-danger float-right mr-2">Cancel</a>
+                <a href="/admin/payment" class="btn btn-sm btn-danger float-right mr-2">Cancel</a>
             </div>
         </div>
     </form>
@@ -49,9 +64,23 @@
                 });
             }, false);
         })();
-
         
+        $("#imgInp").change(function(){
+            readURL(this);
+        }); 
     });
-
+    
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                
+                $('#logo_data').val(e.target.result);
+                $('#img-upload').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
 </script>
 @endpush

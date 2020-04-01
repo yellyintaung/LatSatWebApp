@@ -60,7 +60,8 @@ class PaymentController extends Controller
     */
     public function edit($id)
     {
-        //
+        $payment = Payment::find($id);
+        return view('la.payment.edit')->with('payment',$payment);
     }
     
     /**

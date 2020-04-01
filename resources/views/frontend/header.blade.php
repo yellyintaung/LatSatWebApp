@@ -9,11 +9,14 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+    
     <link rel="stylesheet" href="{{ asset('css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    
+    
     @stack('css')
 </head>
 <body>
@@ -76,12 +79,24 @@
                             </span>
                         </a>
                     </li>
-                    <li class="nav-item latsat-nav-pd">
-                        <a class="nav-link latsat-nav mob-login" href="#">
+                    
+                    <li class="nav-item latsat-nav-pd"> 
+                        @if(Session::get('user')<>null)
+                        <a class="nav-link latsat-nav dropdown-toggle mobile-avaliable" href="#" id="navbardrop" data-toggle="dropdown">
+                            <span class="">{{Session::get('user')}}</span>
+                        </a>
+                        <!-- Dropdown -->
+                        <div class="dropdown-menu latsat-dropdown">
+                            <a class="dropdown-item" href="/user_logout"> Logout </a>
+                        </div>
+                        
+                        @else
+                        <a class="nav-link latsat-nav mob-login" href="/user_login">
                             <img src="{{ asset('images/user.png') }}" 
                             width="24px" class="mb-img"/>&nbsp;
-                           <span class="mb-lg">Sign in</span>
+                            <span class="mb-lg">Login</span>
                         </a>
+                        @endif
                     </li>
                 </ul>
             </div>

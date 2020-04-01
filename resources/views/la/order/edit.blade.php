@@ -1,6 +1,6 @@
 @extends('la.layouts.master')
-@section('ModuleTitle','category Edit')
-@section('contentTitle','category')
+@section('ModuleTitle','Order Edit')
+@section('contentTitle','Order')
 @section('visiblility','hidden')
 @section('content')
 <div class="p-3">

@@ -13,11 +13,13 @@
         <tr>
             <th>No</th>
             <th>Customer Name</th>
-            <th>Product Name</th>
-            <th>Product Quantity</th>
-            <th>Total Amount</th>
-            <th>Delivery</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Amount</th>
             <th>Oder Date</th>
+            <th>Want Date</th>
+            <th>Want Time</th>
+            <th>Delivery</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -38,6 +40,10 @@
             <td>{{ $item->product->product_name }}</td>
             <td>{{ $item->quantity }}</td>
             <td>{{ $item->total_amount }}</td>
+           
+            <td>{{ $item->payment->created_at }}</td>
+            <td>{{ $item->payment->want_date }}</td>
+            <td>{{ $item->payment->time }}</td>
             <td >
                 @if ($item->status == 1 )
                 <label class="font-weight-bold btn-sm btn-light text-success active text-center" style="width:80%;">
@@ -49,7 +55,6 @@
                 </label>
                 @endif
             </td>
-            <td>{{ $item->created_at }}</td>
             <td>
                 <a href="/admin/order/{{ $item->id }}" class="btn btn-sm" style="background-color:#007BFF;color:white;">View</a>
                 

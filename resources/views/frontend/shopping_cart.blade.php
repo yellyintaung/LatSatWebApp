@@ -50,6 +50,7 @@
                                 </div>
                             </td>
                             <td colspan="7">
+                                {{-- {{ dd($item->qty) }} --}}
                                 <div class="info wrap s-cart" style="padding-top:25px;">
                                     <button type="button" id="sub"  class="sub btn-minus" data-id="{{ $item->id }}" data-rawid="{{ $item->__raw_id}}">-</button>
                                     <input class="count pl-2 qty{{ $item->id }} txt-qty" data-id="{{ $item->id }}"

@@ -38,9 +38,24 @@
     </div>
     
     <div class="row mb-3">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <label>Total Amount:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $payment->total }}" readonly>
+        </div>
+        <div class="col-md-6">
+            <label>Order Date:</label>
+            <input type="text" class="form-control form-control-sm" value="{{ $payment->create_at }}" readonly>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label>Want Date:</label>
+            <input type="text" class="form-control form-control-sm" value="{{ $payment->want_date }}" readonly>
+        </div>
+        <div class="col-md-6">
+            <label>Want Time:</label>
+            <input type="text" class="form-control form-control-sm" value="{{ $payment->time }}" readonly>
         </div>
     </div>
     
