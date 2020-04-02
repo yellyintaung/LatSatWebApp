@@ -83,7 +83,7 @@
                     <li class="nav-item latsat-nav-pd"> 
                         @if(Session::get('customer')<>null)
                         <a class="nav-link latsat-nav dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                            <span class="">{{Session::get('customer')}}</span>
+                            <span class="">{{str_limit(Session::get('customer'),4)}}</span>
                         </a>
                         <!-- Dropdown -->
                         <div class="dropdown-menu latsat-dropdown">

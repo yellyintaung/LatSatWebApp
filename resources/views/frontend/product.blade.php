@@ -29,10 +29,10 @@
                         <h6 class="default-color d-fs">အရေအတွက်</h6>
                         <div class="wrap w-100 pt-1 d-fs">
                             <button type="button" id="sub" class="sub mob-sub text-center">-</button>
-                            <input class="count pl-2 txt-qy mob-txt" id="count" type="text" value="1" min="1" max="1000" style="width:60%;" /> 
+                            <input class="count pl-2 txt-qy mob-txt" id="count" type="text" value="1" min="1" max="1000" style="width:50%;" /> 
                             <button type="button" id="plus" class="plus mob-add text-center">+</button>
                         </div>
-                        <a class="btn btn-xs btn-add add text-white b-fs mt-3 float-right" style="cursor:pointer;" data-id="{{ $item->id }}">Add To Cart</a>
+                        <a class="btn btn-xs btn-add add text-white b-fs mt-3 float-right" style="cursor:pointer;" data-id="{{ $item->id }}">စျေးခြင်းသို့ထည့်မည်</a>
                     </div>
                 </div>
             </div>

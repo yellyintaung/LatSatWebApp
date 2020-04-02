@@ -22,11 +22,11 @@
                     <h6 class="default-color font-weight-bold pt-2">အရေအတွက်</h6>
                     <div class="wrap w-100 pt-1">
                         <button type="button" id="sub" class="sub">-</button>
-                        <input class="count pl-2 txt-qy" id="count" type="text" value="1" min="1" max="1000" style="width:6rem;" /> {{ $product->type->type_name }}
+                        <input class="count pl-2 txt-qy" id="count" type="text" value="1" min="1" max="1000"  style="width:50%;" />
                         <button type="button" id="plus" class="plus">+</button>
                     </div>
-                    <a class="btn btn-sm btn-add add text-white mt-3" style="cursor:pointer;" data-id="{{ $product->id }}">Add To Cart</a>
-                    <a href="{{ URL::previous() }}" class="btn btn-sm btn-danger text-white mt-3 float-right">Back</a>
+                    <a class="btn btn-sm btn-add add text-white mt-3" style="cursor:pointer;" data-id="{{ $product->id }}">စျေးခြင်းသို့ထည့်မည်</a>
+                    <a href="{{ URL::previous() }}" class="btn btn-sm btn-danger text-white mt-3 float-right">နောက်သို့</a>
                 </div>
               </div>
             </div>

@@ -13,37 +13,21 @@
         <form action="/registercheck" method="post" style="border: 1px solid #32B34A;" class="p-3">
             {{ csrf_field() }}
             <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="inputEmail4">အမည်</label>
                     <input type="text" name="name"  class="form-control" id="inputEmail4" placeholder="Enter Name" required>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="inputEmail4">စကား၀ှက်</label>
                     <input type="password" name="password"  class="form-control" id="inputEmail4" placeholder="Enter Password" required>
                 </div>
                 
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="inputPassword4">ဖုန်းနံပါတ်</label>
                     <input type="text" name="phone" class="form-control" id="inputPassword4" placeholder="Enter Phone Number" required>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="inputPassword4">ရရှိနိုင်သောမြို့နယ်</label>
-                    <select name="township" class="form-control" id="township" required>
-                        <option value="ကျောက်တံတား">ကျောက်တံတား</option>
-                        <option value="ပန်းပဲတန်း">ပန်းပဲတန်း</option>
-                        <option value="လသာ">လသာ</option>
-                        <option value="ဗိုလ်တစ်ထောင်">ဗိုလ်တစ်ထောင်</option>
-                        <option value="လမ်းမတော်">လမ်းမတော်</option>
-                        <option value="ပုဇွန်တောင်">ပုဇွန်တောင်</option>
-                    </select>
-                </div>
             </div>
-            <div class="form-group">
-                <label for="inputAddress2">လိပ်စာ</label>
-                <textarea class="form-control" name="address" cols="30" rows="3" required></textarea> 
-            </div>
+                
             
             {{-- <div class="form-row">
                 <div class="form-group col-md-6">

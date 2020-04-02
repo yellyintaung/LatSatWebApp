@@ -134,6 +134,8 @@ class FrontendController extends Controller
             $payment = new Payment();
             $payment->customer_id= Session::get('customer_id');
             $payment->total = ShoppingCart::total();
+            $payment->township = $request->township;
+            $payment->address = $request->address;
             $payment->want_date = $request->want_date;
             $payment->time = $request->time;
             $payment->save();
@@ -185,8 +187,6 @@ class FrontendController extends Controller
             $customer->phone = $request->phone;
             $customer->password = $request->password;
             // $customer->region = $request->region;
-            $customer->township = $request->township;
-            $customer->address = $request->address;
             $customer->save();
             return redirect('/user_login');
         }

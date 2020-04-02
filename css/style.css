@@ -378,7 +378,7 @@ span.count {
 
   .meat-card{
     width: 100%;
-    height: 255px;
+    height: 100%;
   }
 
   .meat-card .card-body{
