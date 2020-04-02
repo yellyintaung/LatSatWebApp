@@ -31,22 +31,26 @@
     </div>
     
     <div class="row mb-3">
-        <div class="col-md-6">
-            <label>Total Amount:</label>
-            <input type="text" class="form-control form-control-sm" value="{{ $payment->total }}" readonly>
+        <div class="col-md-4">
+            <label>Delivery Charges:</label>
+            <input type="text" class="form-control form-control-sm" value="{{ $payment->delivery_charge }} ကျပ်" readonly>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
+            <label>Total Amount:</label>
+            <input type="text" class="form-control form-control-sm" value="{{ $payment->total }} ကျပ်" readonly>
+        </div>
+        <div class="col-md-4">
             <label>Order Date:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $payment->created_at }}" readonly>
         </div>
     </div>
 
     <div class="row mb-3">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label>Want Date:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $payment->want_date }}" readonly>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label>Want Time:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $payment->time }}" readonly>
         </div>

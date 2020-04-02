@@ -16,9 +16,8 @@
             <th>Product</th>
             <th>Quantity</th>
             <th>Price per each</th>
+            <th>Type Name</th>
             <th>Amount</th>
-            <th>Want Date</th>
-            <th>Want Time</th>
             <th>Delivery</th>
             <th>Actions</th>
         </tr>
@@ -40,9 +39,8 @@
             <td>{{ $item->product->product_name }}</td>
             <td>{{ $item->quantity }}</td>
             <td>{{ $item->pricepereach }} ကျပ်</td>
+            <td>{{ $item->type }}</td>
             <td>{{ $item->total_amount }} ကျပ်</td>
-            <td>{{ $item->payment->want_date }}</td>
-            <td>{{ $item->payment->time }}</td>
             <td >
                 @if ($item->status == 1 )
                 <label class="font-weight-bold btn-sm btn-light text-success active text-center" style="width:80%;">

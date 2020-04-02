@@ -14,7 +14,11 @@
             {{ csrf_field() }}
             
             <?php
-            $Date =date("d-m-Y");
+            //$Date =date("d-m-Y");
+            $diffWithGMT=6*60*60+30*60; //converting time difference to seconds.
+            $dateFormat="Y-m-d";
+            $Date=gmdate($dateFormat, time()+$diffWithGMT);//time() function returns the current time measured in the number of seconds since the Unix Epoch. 
+            //echo 'current date is '.$Date.'<br>';
             
             $dateObject = new DateTime('now', new DateTimeZone('Asia/Yangon'));
             $mydate =$dateObject->format('h:i A');

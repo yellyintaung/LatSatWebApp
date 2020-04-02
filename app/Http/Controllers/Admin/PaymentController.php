@@ -73,7 +73,10 @@ class PaymentController extends Controller
     */
     public function update(Request $request, $id)
     {
-        //
+        $payment = Payment::find($id);
+        $payment->status = $request->status;
+        $payment->save();
+        return redirect('/admin/payment');
     }
     
     /**

@@ -13,6 +13,7 @@
         <tr>
             <th>No</th>
             <th>Customer Name</th>
+            <th>Delivery Charge</th>
             <th>Total Amount</th>
             <th>Order Date</th>
             <th>Want Date</th>
@@ -35,6 +36,7 @@
         <tr>
             <td> {{ ($tno*10)+$key+1 }} </td>
             <td>{{ $item->pcustomer->name }}</td>
+            <td>{{ $item->delivery_charge }} ကျပ်</td>
             <td>{{ $item->total }} ကျပ်</td>
             <td>{{ $item->created_at }}</td>
             <td>{{ $item->want_date }}</td>
@@ -53,7 +55,7 @@
             <td>
                 <a href="/admin/payment/{{ $item->id }}" class="btn btn-sm" style="background-color:#007BFF;color:white;">View</a>
                 
-                <a href="/admin/item/{{ $item->id }}/edit" class="btn btn-sm" style="background-color:#FFC107;color:black;">Edit</a>
+                <a href="/admin/payment/{{ $item->id }}/edit" class="btn btn-sm" style="background-color:#FFC107;color:black;">Edit</a>
                 
                 <form action="/admin/payment/{{ $item->id }}" method="post" class="d-inline">
                     {{ csrf_field() }}

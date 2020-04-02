@@ -65,7 +65,7 @@ class FrontendController extends Controller
         public function addCart(Request $rq)
         {
             $product = Product::find($rq->id);
-            $row = ShoppingCart::add($rq->id, $product->product_name,$rq->qty, $product->price,['product_img' => $product->product_img]);
+            $row = ShoppingCart::add($rq->id, $product->product_name,$rq->qty, $product->price,['product_img' => $product->product_img, 'type' => $product->type->type_name]);
             $count=ShoppingCart::countRows();
             return response()->json(["count"=>$count]);
         }
@@ -133,7 +133,8 @@ class FrontendController extends Controller
             
             $payment = new Payment();
             $payment->customer_id= Session::get('customer_id');
-            $payment->total = ShoppingCart::total();
+            $payment->total = ShoppingCart::total()+650;
+            $payment->delivery_charge = 650;
             $payment->township = $request->township;
             $payment->address = $request->address;
             $payment->want_date = $request->want_date;
@@ -148,6 +149,7 @@ class FrontendController extends Controller
                 $order->product_id = $sp->id;
                 $order->quantity = $sp->qty;
                 $order->pricepereach = $sp->price;
+                $order->type = $sp->type;
                 $order->total_amount = $sp->total;
                 $order->save();
             }

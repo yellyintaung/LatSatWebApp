@@ -76,16 +76,38 @@
                 </table>
             </div>
             
-            
             <div class="row">
-                <div class="col-md-9 col-xs-12">
+                <div class="col-6">
                     
                 </div>
-                <div class="col-md-2 col-xs-12 pt-2">
+                <div class="col-3 pt-2">
+                    <h6 class="info" style="font-size:18px;">ပို့ဆောင်ခ</h6>
+                </div>
+                <div class="col-3 pt-2">
+                    <h6 class="info" style="font-size:18px;position:absolute;" id="totalPrice"> 650 ကျပ်</h6>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-6">
+                    
+                </div>
+                <div class="col-3 pt-2">
                     <h6 class="info" style="font-size:18px;">ကျသင့်ငွေ</h6>
                 </div>
-                <div class="col-md-1 col-xs-12 pt-2">
+                <div class="col-3 pt-2">
                     <h6 class="info" style="font-size:18px;position:absolute;" id="totalPrice">{{ $total }}ကျပ်</h6>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-6">
+                    
+                </div>
+                <div class="col-3 pt-2">
+                    <h6 class="info" style="font-size:18px;">စုစုပေါင်းကျသင့်ငွေ</h6>
+                </div>
+                <div class="col-3 pt-2">
+                    <h6 class="info" style="font-size:18px;position:absolute;" id="totalPrice">{{ $total+650 }}ကျပ်</h6>
                 </div>
             </div>
             <div class="row pt-5">
