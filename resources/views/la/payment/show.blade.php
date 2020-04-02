@@ -7,33 +7,26 @@
 @section('content')
 <div class="p-3">
     <div class="row mb-3">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label>Customer Name:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $payment->pcustomer->name }}" readonly>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label>Phone Number:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $payment->pcustomer->phone }}" readonly>
         </div>
-    </div>
-    
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <label>Region:</label>
-            <input type="text" class="form-control form-control-sm" value="{{ $payment->pcustomer->region }}" readonly>
-        </div>
-        
-        <div class="col-md-6">
+
+        <div class="col-md-4">
             <label>Township:</label>
-            <input type="text" class="form-control form-control-sm" value="{{ $payment->pcustomer->township }}" readonly>
+            <input type="text" class="form-control form-control-sm" value="{{ $payment->township }}" readonly>
         </div>
     </div>
     
     <div class="row mb-3">
         <div class="col-md-12">
             <label>Address:</label>
-            <textarea class="form-control form-control-sm" readonly>{{ $payment->pcustomer->address }}</textarea>
+            <textarea class="form-control form-control-sm" readonly>{{ $payment->address }}</textarea>
         </div>
     </div>
     
@@ -44,7 +37,7 @@
         </div>
         <div class="col-md-6">
             <label>Order Date:</label>
-            <input type="text" class="form-control form-control-sm" value="{{ $payment->create_at }}" readonly>
+            <input type="text" class="form-control form-control-sm" value="{{ $payment->created_at }}" readonly>
         </div>
     </div>
 

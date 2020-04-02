@@ -15,8 +15,8 @@
             <th>Customer Name</th>
             <th>Product</th>
             <th>Quantity</th>
+            <th>Price per each</th>
             <th>Amount</th>
-            <th>Oder Date</th>
             <th>Want Date</th>
             <th>Want Time</th>
             <th>Delivery</th>
@@ -39,9 +39,8 @@
             <td>{{ $item->payment->pcustomer->name }}</td>
             <td>{{ $item->product->product_name }}</td>
             <td>{{ $item->quantity }}</td>
+            <td>{{ $item->pricepereach }} ကျပ်</td>
             <td>{{ $item->total_amount }} ကျပ်</td>
-           
-            <td>{{ $item->payment->created_at }}</td>
             <td>{{ $item->payment->want_date }}</td>
             <td>{{ $item->payment->time }}</td>
             <td >

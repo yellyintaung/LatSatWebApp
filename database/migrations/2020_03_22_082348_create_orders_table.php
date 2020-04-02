@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->integer('payment_id');
             $table->integer('product_id');
             $table->integer('quantity');
+            $table->double('pricepereach',12,2);
             $table->double('total_amount');
             $table->integer('status')->default(0);
             $table->timestamps();

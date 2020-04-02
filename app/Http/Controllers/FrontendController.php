@@ -147,6 +147,7 @@ class FrontendController extends Controller
                 $order->payment_id = $payment->id;
                 $order->product_id = $sp->id;
                 $order->quantity = $sp->qty;
+                $order->pricepereach = $sp->price;
                 $order->total_amount = $sp->total;
                 $order->save();
             }

@@ -8,45 +8,41 @@
 
 <div class="p-3">
     <div class="row mb-3">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label>Customer Name:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $order->payment->pcustomer->name }}" readonly>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label>Phone Number:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $order->payment->pcustomer->phone }}" readonly>
         </div>
-    </div>
-    
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <label>Region:</label>
-            <input type="text" class="form-control form-control-sm" value="{{ $order->payment->pcustomer->region }}" readonly>
-        </div>
-        
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label>Township:</label>
-            <input type="text" class="form-control form-control-sm" value="{{ $order->payment->pcustomer->township }}" readonly>
+            <input type="text" class="form-control form-control-sm" value="{{ $order->payment->township }}" readonly>
         </div>
     </div>
     
     <div class="row mb-3">
         <div class="col-md-12">
             <label>Address:</label>
-            <textarea class="form-control form-control-sm" readonly>{{ $order->payment->pcustomer->address }}</textarea>
+            <textarea class="form-control form-control-sm" readonly>{{ $order->payment->address }}</textarea>
         </div>
     </div>
     
     <div class="row mb-3">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label>Product Name:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $order->product->product_name }}" readonly>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-md-4">
             <label>Product Quantity:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $order->quantity }}" readonly>
+        </div>
+        <div class="col-md-4">
+            <label>Price Per Each:</label>
+            <input type="text" class="form-control form-control-sm" value="{{ $order->pricepereach }}" readonly>
         </div>
     </div>
 
