@@ -71,7 +71,7 @@
             
             <div class="form-group">
                 <label for="inputAddress2">လိပ်စာ</label>
-                <textarea class="form-control" name="address" cols="30" rows="3" required></textarea> 
+                <textarea class="form-control" name="address" cols="30" rows="3" placeholder="အိမ်နံပါတ်၊လမ်း၊ရပ်ကွက်" required></textarea> 
             </div>
             
             <div class="text-right">
