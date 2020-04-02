@@ -33,6 +33,20 @@ Route::post('/placeOrder', 'FrontendController@placeOrder');
 
 Route::get('/user_login','FrontendController@userLogin');
 Route::post('/user','FrontendController@login');
+Route::get('/user_register','FrontendController@userRegister');
+Route::post('/registercheck','FrontendController@register');
 Route::get('/user_logout','FrontendController@logout');
+
+
+Route::get('/check_user','FrontendController@checkUser');
+
+
+Route::get('/clear',function(){
+    Artisan::call("cache:clear");
+    Artisan::call("config:cache");
+    Artisan::call("route:clear");
+    Artisan::call("view:clear");
+    echo "<h3> Cache Cleared </h3>";
+    });
 
 Route::get('/home', 'HomeController@index')->name('home');

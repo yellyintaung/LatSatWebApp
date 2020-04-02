@@ -13,6 +13,7 @@ use App\Customer;
 use App\User;
 use Session;
 use ShoppingCart;
+use Hash;
 
 
 class FrontendController extends Controller
@@ -113,27 +114,25 @@ class FrontendController extends Controller
         
         public function placeOrder(Request $request)
         {
-            $user = new User();
-            $user->name = $request->name;
-            $user->password = $request->password;
-            $user->phone = $request->phone;
-            $user->type = 1 ;
-            $user->save();
+            // $user = new User();
+            // $user->name = $request->name;
+            // $user->password = Hash::make($request->password);
+            // $user->phone = $request->phone;
+            // $user->type = 1 ;
+            // $user->save();
             
             
-            $customer = new Customer();
-            $customer->user_id = $user->id;
-            $customer->name = $request->name;
-            $customer->phone = $request->phone;
-            $customer->region = $request->region;
-            $customer->township = $request->township;
-            $customer->address = $request->address;
-            
-            
-            $customer->save();
+            // $customer = new Customer();
+            // $customer->user_id = $user->id;
+            // $customer->name = $request->name;
+            // $customer->phone = $request->phone;
+            // $customer->region = $request->region;
+            // $customer->township = $request->township;
+            // $customer->address = $request->address;
+            // $customer->save();
             
             $payment = new Payment();
-            $payment->customer_id= $customer->id;
+            $payment->customer_id= Session::get('customer_id');
             $payment->total = ShoppingCart::total();
             $payment->want_date = $request->want_date;
             $payment->time = $request->time;
@@ -160,21 +159,53 @@ class FrontendController extends Controller
         }
         
         public function login(Request $req){
-            $users = User::where('phone',$req->phone)->where('password',$req->password)->get();
-            
-            if($users<>null){
-                foreach($users as $user){
-                    Session::put('user',$user->name);
+            $customers = Customer::where('phone',$req->phone)->where('password',$req->password)->get();
+            if($customers->count()<>0){
+                foreach($customers as $customer){
+                    Session::put('customer',$customer->name);
+                    Session::put('customer_id',$customer->id);
                 }
                 return redirect('/')->with('menu_categories',$this->menu_categories);
-            }else
-            return redirect('/user_login');
-            
-            }
-
-            public function logout()
-            {
-                Session::forget('user');
-                return redirect('/')->with('menu_categories',$this->menu_categories);
+            }else{
+                Session::put('customer_id',null);
+                return redirect('/user_login')->with('menu_categories',$this->menu_categories);
             }
         }
+
+        public function userRegister()
+        {
+            return view('frontend.user_register')->with('menu_categories',$this->menu_categories);
+        }
+
+        public function register(Request $request)
+        {
+            
+            $customer = new Customer();
+            $customer->name = $request->name;
+            $customer->phone = $request->phone;
+            $customer->password = $request->password;
+            // $customer->region = $request->region;
+            $customer->township = $request->township;
+            $customer->address = $request->address;
+            $customer->save();
+            return redirect('/user_login');
+        }
+
+        
+        
+        public function checkUser()
+        {
+            $usercheck = Session::get('customer_id');
+            if($usercheck<>null){
+                return redirect('/showCheckoutview')->with('menu_categories',$this->menu_categories);
+            }else{
+                return redirect('/user_login')->with('menu_categories',$this->menu_categories);
+            }
+        }
+        
+        public function logout()
+        {
+            Session::forget('customer');
+            return redirect('/')->with('menu_categories',$this->menu_categories);
+        }
+    }

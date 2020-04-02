@@ -10,7 +10,7 @@
             <h5 class="text-white font-weight-bold">Your Shopping Cart</h5>   
         </div> --}}
         <img src="/images/shopping.png" alt="product" width="100%">
-
+        
         <h6 class="info pt-3" style="font-size:20px;text-align:right;">
             <span style="color:#32B34A">{{ $rows }}</span> products in cart</h6>
             
@@ -91,7 +91,7 @@
                     <a href="{{ URL::previous() }}" class="btn con-shop">ဝယ်ဦးမယ် >> </a>
                 </div>
                 <div class="col-md-3 col-xs-12">
-                    <a href="/showCheckoutview" class="btn check text-white" style="width:100%;background:#32B34A;">အော်ဒါတင်ရန်</a>
+                    <a href="/check_user" class="btn check text-white" style="width:100%;background:#32B34A;">အော်ဒါတင်ရန်</a>
                 </div>
             </div><br><br>
         </div>
