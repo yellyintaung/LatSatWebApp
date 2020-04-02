@@ -47,6 +47,12 @@ Route::get('/clear',function(){
     Artisan::call("route:clear");
     Artisan::call("view:clear");
     echo "<h3> Cache Cleared </h3>";
-    });
+});
+
+Route::get('/clear_user',function(){
+    Session::forget('customer');
+    Session::forget('customer_id');
+    echo "<h3> Session Clear! </h3>";
+});
 
 Route::get('/home', 'HomeController@index')->name('home');

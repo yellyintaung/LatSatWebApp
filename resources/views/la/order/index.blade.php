@@ -39,7 +39,7 @@
             <td>{{ $item->payment->pcustomer->name }}</td>
             <td>{{ $item->product->product_name }}</td>
             <td>{{ $item->quantity }}</td>
-            <td>{{ $item->total_amount }}</td>
+            <td>{{ $item->total_amount }} ကျပ်</td>
            
             <td>{{ $item->payment->created_at }}</td>
             <td>{{ $item->payment->want_date }}</td>

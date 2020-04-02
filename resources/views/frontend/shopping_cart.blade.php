@@ -34,6 +34,8 @@
                             <th></th>
                             <th scope="col">စုစုပေါင်းတန်ဖိုး</th>
                             <th scope="col"></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

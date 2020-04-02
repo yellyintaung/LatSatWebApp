@@ -35,7 +35,7 @@
         <tr>
             <td> {{ ($tno*10)+$key+1 }} </td>
             <td>{{ $item->pcustomer->name }}</td>
-            <td>{{ $item->total }}</td>
+            <td>{{ $item->total }} ကျပ်</td>
             <td>{{ $item->created_at }}</td>
             <td>{{ $item->want_date }}</td>
             <td>{{ $item->time }}</td>

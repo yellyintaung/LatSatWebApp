@@ -19,13 +19,13 @@
         </div>
     </div>
     
-    <div class="row mb-3">
+    {{-- <div class="row mb-3"> --}}
         {{-- <div class="col-md-6">
             <label>Region:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $customer->region }}" readonly>
         </div> --}}
         
-        <div class="col-md-6">
+        {{-- <div class="col-md-6">
             <label>Township:</label>
             <input type="text" class="form-control form-control-sm" value="{{ $customer->township }}" readonly>
         </div>
@@ -36,7 +36,7 @@
             <label>Address:</label>
             <textarea class="form-control form-control-sm" readonly>{{ $customer->address }}</textarea>
         </div>
-    </div>
+    </div> --}}
     
     
     <a href="/admin/customer" class="btn btn-sm mr-2" style="background-color:#fff;border-color:red;color:black;"><i class="fas fa-angle-double-left"></i>&nbsp;Back</a>

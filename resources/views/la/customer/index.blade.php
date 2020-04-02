@@ -44,7 +44,7 @@
                 <form action="/admin/customer/{{ $item->id }}" method="post" class="d-inline">
                     {{ csrf_field() }}
                     {{ method_field('delete') }}
-                    <button type="submit" class="btn btn-sm btn-danger demo" onclick="return confirm('Are you sure?')">Delete</button>
+                    <button type="submit" class="btn btn-sm btn-danger demo" onclick="return confirm('Are you sure?')" disabled>Delete</button>
                 </form>
             </td>
         </tr>

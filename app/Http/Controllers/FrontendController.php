@@ -196,9 +196,11 @@ class FrontendController extends Controller
         public function checkUser()
         {
             $usercheck = Session::get('customer_id');
+            // dd($usercheck);
             if($usercheck<>null){
                 return redirect('/showCheckoutview')->with('menu_categories',$this->menu_categories);
             }else{
+                Session::put('customer_id',null);
                 return redirect('/user_login')->with('menu_categories',$this->menu_categories);
             }
         }
@@ -206,6 +208,7 @@ class FrontendController extends Controller
         public function logout()
         {
             Session::forget('customer');
+            Session::forget('customer_id');
             return redirect('/')->with('menu_categories',$this->menu_categories);
         }
     }
