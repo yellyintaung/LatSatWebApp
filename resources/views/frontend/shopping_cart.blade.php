@@ -84,7 +84,7 @@
                     <h6 class="info" style="font-size:18px;">ပို့ဆောင်ခ</h6>
                 </div>
                 <div class="col-3 pt-2">
-                    <h6 class="info" style="font-size:18px;position:absolute;" > 650 ကျပ်</h6>
+                    <h6 class="info" style="font-size:18px;position:absolute;"> 650 ကျပ်</h6>
                 </div>
             </div>
             <div class="row pb-3">
@@ -107,7 +107,7 @@
                     <h6 class="info" style="font-size:18px;">စုစုပေါင်းကျသင့်ငွေ</h6>
                 </div>
                 <div class="col-3 pt-2">
-                    <h6 class="info" style="font-size:18px;position:absolute;" id="totalPrice">{{ $total+650 }}ကျပ်</h6>
+                    <h6 class="info" style="font-size:18px;position:absolute;" id="totalPriceDone">{{ $total+650 }}ကျပ်</h6>
                 </div>
             </div>
             <div class="row pt-5">
@@ -134,9 +134,12 @@
                     console.log(data);
                     $('.total'+id).html(data.item.total);
                     $('#totalPrice').html(data.total+'ကျပ်');
+                    $('#totalPriceDone').html(data.total+650+'ကျပ်');
                 }
             });
         }
+
+        
         $(document).ready(function(){
             $('.btn-minus').click(function(){
                 var id=$(this).data("id");
