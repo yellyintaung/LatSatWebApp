@@ -16,7 +16,7 @@
             <?php
             //$Date =date("d-m-Y");
             $diffWithGMT=6*60*60+30*60; //converting time difference to seconds.
-            $dateFormat="Y-m-d";
+            $dateFormat="d-m-Y";
             $Date=gmdate($dateFormat, time()+$diffWithGMT);//time() function returns the current time measured in the number of seconds since the Unix Epoch. 
             //echo 'current date is '.$Date.'<br>';
             

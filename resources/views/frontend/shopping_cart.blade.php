@@ -9,7 +9,7 @@
         {{-- <div class="breadcrumb mt-3" style="background: #32B34A;">
             <h5 class="text-white font-weight-bold">Your Shopping Cart</h5>   
         </div> --}}
-        <img src="/images/shopping.png" alt="product" width="100%">
+        <img src="/images/checkoutbanner.png" alt="product" width="100%">
         
         <h6 class="info pt-3" style="font-size:20px;text-align:right;">
             <span style="color:#32B34A">{{ $rows }}</span> products in cart</h6>
