@@ -84,7 +84,7 @@
                     <h6 class="info" style="font-size:18px;">ပို့ဆောင်ခ</h6>
                 </div>
                 <div class="col-3 pt-2">
-                    <h6 class="info" style="font-size:18px;position:absolute;" id="totalPrice"> 650 ကျပ်</h6>
+                    <h6 class="info" style="font-size:18px;position:absolute;" > 650 ကျပ်</h6>
                 </div>
             </div>
             <div class="row pb-3">
