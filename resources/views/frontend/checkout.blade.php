@@ -26,8 +26,13 @@
             $mTime=$str_arr[0].'<br>';
             $AMPM=$str_arr[1];
             $str_arr1 = explode (":", $mTime);
+            
             $mmTime=$str_arr1[0].'<br>';
             $minute=$str_arr1[1];
+            if($mmTime==12 && $AMPM=='PM'){
+                $mmTime = 0;
+            }
+            //ssssss
             
             if($AMPM=='PM' && $mmTime>=4 && $minute>00){
                 $day1 = date('d-m-Y', strtotime($Date. ' + 2 days'));
