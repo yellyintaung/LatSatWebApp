@@ -214,4 +214,9 @@ class FrontendController extends Controller
             Session::forget('customer_id');
             return redirect('/')->with('menu_categories',$this->menu_categories);
         }
+
+        public function useraccCheck()
+        {
+            return view('frontend.user_check')->with('menu_categories',$this->menu_categories);
+        }
     }

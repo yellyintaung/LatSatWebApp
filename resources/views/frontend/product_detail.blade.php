@@ -1,38 +1,64 @@
 @extends('frontend.master')
 @push('css')
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+<style>
+    .toast {
+        transition: 0.32s all ease-in-out
+    }
+    
+    .toast-container--fade {
+        right: 0;
+        bottom: 0
+    }
+    
+    .toast-container--fade .toast-wrapper {
+        display: inline-block
+    }
+    
+    .toast.fade-init {
+        opacity: 0
+    }
+    
+    .toast.fade-show {
+        opacity: 1
+    }
+    
+    .toast.fade-hide {
+        opacity: 0
+    }
+</style>
 @endpush
 @section('content')
 
 <section style="padding-top:30px;">
-        
+    
     <div class="container">
         <div class="card detail-card mb-3" style="width: 100%;">
             <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="/uploads/{{ $product->product_img }}" alt="" style="width: 100%;padding:20px;">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title default-color font-weight-bold">{{ $product->product_name }}</h5>
-                  <p class="card-text">
-                    {{ $product->description }}
-                    </p>
-                    <p class="card-text m-0 pb-1">{{ $product->type->type_name }} - {{ $product->price }}ကျပ်</p>
-                    <h6 class="default-color font-weight-bold pt-2">အရေအတွက်</h6>
-                    <div class="wrap w-100 pt-1">
-                        <button type="button" id="sub" class="sub">-</button>
-                        <input class="count pl-2 txt-qy" id="count" type="text" value="1" min="1" max="1000"  style="width:50%;" />
-                        <button type="button" id="plus" class="plus">+</button>
-                    </div>
-                    <a class="btn btn-sm btn-add add text-white mt-3" style="cursor:pointer;" data-id="{{ $product->id }}">စျေးခြင်းသို့ထည့်မည်</a>
-                    <a href="{{ URL::previous() }}" class="btn btn-sm btn-danger text-white mt-3 float-right">နောက်သို့</a>
+                <div class="col-md-4">
+                    <img src="/uploads/{{ $product->product_img }}" alt="" style="width: 100%;padding:20px;">
                 </div>
-              </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title default-color font-weight-bold">{{ $product->product_name }}</h5>
+                        <p class="card-text">
+                            {{ $product->description }}
+                        </p>
+                        <p class="card-text m-0 pb-1">{{ $product->type->type_name }} - {{ $product->price }}ကျပ်</p>
+                        <h6 class="default-color font-weight-bold pt-2">အရေအတွက်</h6>
+                        <div class="wrap w-100 pt-1">
+                            <button type="button" id="sub" class="sub">-</button>
+                            <input class="count pl-2 txt-qy" id="count" type="text" value="1" min="1" max="1000"  style="width:35%;" />
+                            <button type="button" id="plus" class="plus">+</button>
+                        </div>
+                        <a class="btn btn-add  animatebutton add text-white mt-4" style="cursor:pointer;" id="animatebutton" data-id="{{ $product->id }}">စျေးခြင်းသို့ထည့်မည်</a>
+                        <a href="{{ URL::previous() }}" class="btn btn-danger text-white mt-4 float-right">နောက်သို့</a>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
     </div>      
-        
+    
 </section>
 @endsection
 @push('scripts')
@@ -69,6 +95,20 @@
                 $("#errmsg").html("Digits Only").show().fadeOut("slow");
                 return false;
             }
+        });
+        
+        
+        $( document ).ready(function() {
+            // Bounce button
+            $("#animatebutton").click(function(){
+                const element = document.querySelector('.animatebutton');
+                element.classList.add('animated', 'tada');
+                setTimeout(function() {
+                    element.classList.remove('tada');
+                }, 1000);
+            });
+            
+            
         });
         
     });

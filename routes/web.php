@@ -33,8 +33,13 @@ Route::post('/placeOrder', 'FrontendController@placeOrder');
 
 Route::get('/user_login','FrontendController@userLogin');
 Route::post('/user','FrontendController@login');
+
+Route::get('/useracc_check','FrontendController@useraccCheck');
+
 Route::get('/user_register','FrontendController@userRegister');
 Route::post('/registercheck','FrontendController@register');
+
+
 Route::get('/user_logout','FrontendController@logout');
 
 

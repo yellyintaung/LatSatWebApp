@@ -46,7 +46,7 @@
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     အကောင့်၀င်မည်</button>
-                                <a href="/user_register" class="text-decoration-none btn btn-add text-white ml-3">Register</a>
+                                <a href="/user_register" class="text-decoration-none btn btn-add text-white ml-3">အကောင့်ဖန်တီးရန်</a>
 {{-- 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">

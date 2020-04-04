@@ -198,9 +198,9 @@
   background-color: #32B34A;
 }
 
-.btn-add:hover{
+/* .btn-add:hover{
   color: #000000 !important;
-}
+} */
 
 .img-zoom{
   display: block;
@@ -465,6 +465,14 @@ span.count {
     font-size:8px;
     padding:3px;
   }
+
+  .mob-lr{
+    display: none;
+  }
   
+  .mob-rl{
+    display: inline !important;
+    font-size: 15px;
+  }
 }
 /* color code - #32B34A */
