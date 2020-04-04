@@ -81,11 +81,11 @@
         {{-- <a href="/admin/order/{{ $order->payment->id }}/edit" class="btn btn-sm mr-2" style="background-color:#FFC107;color:black;width:4.5em;">Edit</a> --}}
         
         
-        <form action="/admin/order/{{ $order->payment->id }}" method="post" class="d-inline">
+        {{-- <form action="/admin/order/{{ $order->payment->id }}" method="post" class="d-inline">
             {{ csrf_field() }}
             {{ method_field('delete') }}
             <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
-        </form>
+        </form> --}}
         
     </div>
 </div>
