@@ -204,7 +204,7 @@ class FrontendController extends Controller
                 return redirect('/showCheckoutview')->with('menu_categories',$this->menu_categories);
             }else{
                 Session::put('customer_id',null);
-                return redirect('/user_login')->with('menu_categories',$this->menu_categories);
+                return redirect('/useracc_check')->with('menu_categories',$this->menu_categories);
             }
         }
         
