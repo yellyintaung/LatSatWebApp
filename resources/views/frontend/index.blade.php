@@ -44,6 +44,7 @@
         <a href="/product/{{ $item->id }}"  class="icon-logo">
           <img src="/uploads/{{ $item->logo }}" alt="" class="mob-icon">
         </a>
+        <p style="font-size:12px;">{{ $item->category_name }}</p>
       </div>
       @endforeach
     </div>

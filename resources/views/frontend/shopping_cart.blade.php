@@ -25,9 +25,12 @@
                             <th></th>
                             <th></th>
                             <th scope="col">ဈေးနှုန်း</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                             <th scope="col">အရေအတွက်</th>
-                            <th></th>
-                            <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -45,18 +48,18 @@
                             <td colspan="5">
                                 <div  style="padding-top:28px;">{{ $item->name }} </div>
                             </td>
-                            <td>
+                            <td colspan="6">
                                 <div  style="padding-top:28px;">
                                     <input type="hidden" class=" price{{ $item->id }} " value="{{ $item->price }}">
-                                    {{ $item->price }}ကျပ်
+                                    {{ $item->type}} -{{ $item->price }}ကျပ်
                                 </div>
                             </td>
-                            <td colspan="7">
+                            <td colspan="5">
                                 {{-- {{ dd($item->qty) }} --}}
                                 <div class="info wrap s-cart" style="padding-top:25px;">
                                     <button type="button" id="sub"  class="sub btn-minus" data-id="{{ $item->id }}" data-rawid="{{ $item->__raw_id}}">-</button>
                                     <input class="count pl-2 qty{{ $item->id }} txt-qty" data-id="{{ $item->id }}"
-                                    data-rawid="{{ $item->__raw_id}}" id="count" type="text" value="{{ $item->qty }}" style="text-align:center; min="1" max="1000" />{{ $item->type_name }}
+                                    data-rawid="{{ $item->__raw_id}}" id="count" type="text" value="{{ $item->qty }}" style="text-align:center; min="1" max="1000" />
                                     <button type="button" id="plus" class="plus btn-plus" data-id="{{ $item->id }}" data-rawid="{{ $item->__raw_id}}">+</button>
                                 </div>
                             </td>
