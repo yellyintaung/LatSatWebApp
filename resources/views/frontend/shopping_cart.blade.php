@@ -44,7 +44,7 @@
                     <tbody>
                         @foreach ($cart as $item)
                         <tr class="cart-tr">
-                            <th scope="row"><img src="../uploads/{{ $item->product_img }}" alt="laptops" class="headset" style="width:150px;" /></th>
+                            <th scope="row"><img src="../uploads/{{ $item->product_img }}" alt="laptops" class="headset" style="width:50px;" /></th>
                             <td colspan="5">
                                 <div  style="padding-top:28px;">{{ $item->name }} </div>
                             </td>
