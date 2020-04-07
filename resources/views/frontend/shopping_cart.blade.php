@@ -46,17 +46,17 @@
                         <tr class="cart-tr">
                             <th scope="row"><img src="../uploads/{{ $item->product_img }}" alt="laptops" class="headset" style="width:50px;" /></th>
                             <td colspan="5">
-                                <div  style="padding-top:28px;">{{ $item->name }} </div>
+                                <div  style="padding-top:10px;">{{ $item->name }} </div>
                             </td>
                             <td colspan="6">
-                                <div  style="padding-top:28px;">
+                                <div  style="padding-top:10px;">
                                     <input type="hidden" class=" price{{ $item->id }} " value="{{ $item->price }}">
                                     {{ $item->type}} -{{ $item->price }}ကျပ်
                                 </div>
                             </td>
                             <td colspan="5">
                                 {{-- {{ dd($item->qty) }} --}}
-                                <div class="info wrap s-cart" style="padding-top:25px;">
+                                <div class="info wrap s-cart" style="padding-top:10px;">
                                     <button type="button" id="sub"  class="sub btn-minus" data-id="{{ $item->id }}" data-rawid="{{ $item->__raw_id}}">-</button>
                                     <input class="count pl-2 qty{{ $item->id }} txt-qty" data-id="{{ $item->id }}"
                                     data-rawid="{{ $item->__raw_id}}" id="count" type="text" value="{{ $item->qty }}" style="text-align:center; min="1" max="1000" />
@@ -64,13 +64,13 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="info" style="padding-top:30px;"><span class="total{{$item->id}}">{{ $item->qty*$item->price }}</span>ကျပ်</div>
+                                <div class="info" style="padding-top:10px;"><span class="total{{$item->id}}">{{ $item->qty*$item->price }}</span>ကျပ်</div>
                             </td>
                             <td>
                                 <form action="/shoppingCartdelete" method="post">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="id" value="{{ $item->__raw_id}}">
-                                    <button class="info" onclick="return confirm('Are you sure?')" style="margin-top:1.8em;background:none;border:none;"><i class="fas fa-trash-alt"></i></button>
+                                    <button class="info" onclick="return confirm('Are you sure?')" style="margin-top:0.7em;background:none;border:none;"><i class="fas fa-trash-alt"></i></button>
                                 </form> 
                             </td>
                         </tr>
