@@ -165,23 +165,27 @@ class FrontendController extends Controller
         
         public function login(Request $req){
             $customers = Customer::where('phone',$req->phone)->where('password',$req->password)->get();
+            $sc = ShoppingCart::all();
             if($customers->count()<>0){
                 foreach($customers as $customer){
                     Session::put('customer',$customer->name);
                     Session::put('customer_id',$customer->id);
                 }
+                if($sc->count()<>0){
+                    return redirect('/showShoppingCartview')->with('menu_categories',$this->menu_categories);
+                }else
                 return redirect('/')->with('menu_categories',$this->menu_categories);
             }else{
                 Session::put('customer_id',null);
                 return redirect('/user_login')->with('menu_categories',$this->menu_categories);
             }
         }
-
+        
         public function userRegister()
         {
             return view('frontend.user_register')->with('menu_categories',$this->menu_categories);
         }
-
+        
         public function register(Request $request)
         {
             
@@ -193,7 +197,7 @@ class FrontendController extends Controller
             $customer->save();
             return redirect('/user_login');
         }
-
+        
         
         
         public function checkUser()
@@ -214,7 +218,7 @@ class FrontendController extends Controller
             Session::forget('customer_id');
             return redirect('/')->with('menu_categories',$this->menu_categories);
         }
-
+        
         public function useraccCheck()
         {
             return view('frontend.user_check')->with('menu_categories',$this->menu_categories);
