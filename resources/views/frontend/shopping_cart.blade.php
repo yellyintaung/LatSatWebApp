@@ -118,7 +118,7 @@
                     <a href="{{ URL::previous() }}" class="btn con-shop">ဝယ်ဦးမယ် >> </a>
                 </div>
                 <div class="col-md-3 col-xs-12">
-                    <a href="/check_user" class="btn check text-white" style="width:100%;background:#32B34A;">အော်ဒါတင်ရန်</a>
+                    <a href="/check_user" class="btn check text-white" style="width:100%;background:#32B34A;">အော်ဒါတင်ရန်ဆက်သွားမည်</a>
                 </div>
             </div><br><br>
         </div>

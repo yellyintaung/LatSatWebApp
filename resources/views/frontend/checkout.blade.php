@@ -84,7 +84,7 @@
             </div>
             
             <div class="text-right">
-                <button type="submit" class="btn btn-add text-white" onclick="return alert('Your Order is Successful!')">Place Order</button>
+                <button type="submit" class="btn btn-add text-white" onclick="return alert('Your Order is Successful!')">အော်ဒါတင်မည်</button>
             </div>
         </form>
     </div>
