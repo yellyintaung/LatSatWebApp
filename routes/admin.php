@@ -28,6 +28,8 @@ Route::get('/admin', function()
     Route::resource('/admin/order', 'Admin\OrderController');
     
     Route::resource('/admin/payment', 'Admin\PaymentController');
+
+    Route::resource('/admin/township', 'Admin\TownshipController');
 });
 
 Auth::routes();

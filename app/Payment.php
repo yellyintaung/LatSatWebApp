@@ -14,4 +14,9 @@ class Payment extends Model
     {
         return $this->belongsTo('App\Customer', 'customer_id');
     }
+
+    public function ptownship()
+    {
+        return $this->belongsTo('App\Township', 'township_id');
+    }
 }

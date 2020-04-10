@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/fontawesome-free/css/all.min.css')}}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Padauk&display=swap" rel="stylesheet">
     <!-- Theme style -->
     
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.css') }}">

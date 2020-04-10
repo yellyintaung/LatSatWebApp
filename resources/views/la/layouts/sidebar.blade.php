@@ -70,6 +70,14 @@
         </li>
 
         <li class="nav-item has-treeview">
+          <a class="nav-link" href="/admin/township">
+            <i class="nav-icon fas fa-city"></i>
+            <p>Township</p>
+          </a>
+        </li>
+        
+
+        <li class="nav-item has-treeview">
           <a class="nav-link" href="/admin/customer">
             <i class="nav-icon fas fa-user-tie"></i>
             <p>Customer</p>
