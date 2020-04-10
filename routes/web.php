@@ -45,6 +45,11 @@ Route::get('/user_logout','FrontendController@logout');
 
 Route::get('/check_user','FrontendController@checkUser');
 
+Route::get('/clear_user',function(){
+    Session::forget('customer');
+    Session::forget('customer_id');
+    echo "<h3> Session Clear! </h3>";
+});
 
 Route::get('/clear',function(){
     Artisan::call("cache:clear");
@@ -54,10 +59,6 @@ Route::get('/clear',function(){
     echo "<h3> Cache Cleared </h3>";
 });
 
-Route::get('/clear_user',function(){
-    Session::forget('customer');
-    Session::forget('customer_id');
-    echo "<h3> Session Clear! </h3>";
-});
+
 
 Route::get('/home', 'HomeController@index')->name('home');

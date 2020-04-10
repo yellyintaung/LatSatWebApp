@@ -4,6 +4,7 @@
   font-family: 'Padauk', sans-serif;
 
 }
+
 .icon-logo img {
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -28,6 +29,10 @@
 
 .h-fs{
   font-size: 17px;
+}
+
+.latsat-nav{
+  font-size: 20px;
 }
 
 .latsat-nav:link{
@@ -423,7 +428,7 @@ span.count {
   }
   
   .footer{
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .mob-cate{

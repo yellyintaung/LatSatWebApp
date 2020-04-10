@@ -18,13 +18,12 @@
                     <input type="text" name="name"  class="form-control" id="inputEmail4" placeholder="Enter Name" required>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="inputEmail4">စကား၀ှက်</label>
-                    <input type="password" name="password"  class="form-control" id="inputEmail4" placeholder="Enter Password" required>
-                </div>
-                
-                <div class="form-group col-md-4">
                     <label for="inputPassword4">ဖုန်းနံပါတ်</label>
                     <input type="text" name="phone" class="form-control" id="inputPassword4" placeholder="Enter Phone Number" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">စကား၀ှက်</label>
+                    <input type="password" name="password"  class="form-control" id="inputEmail4" placeholder="Enter Password" required>
                 </div>
             </div>
                 

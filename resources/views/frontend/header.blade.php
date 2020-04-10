@@ -9,7 +9,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     {{-- <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> --}}
-    <link href="https://fonts.googleapis.com/css?family=Padauk&display=swap" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@700&display=swap" rel="stylesheet"> --}}
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     
@@ -43,7 +44,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button> --}}
             <!-- Links -->
-            <div class="navbar-collapse n-fs justify-content-center" id="navbarText">
+            <div class="navbar-collapse n-fs justify-content-center"  id="navbarText">
                 <a class="mobilelogo" href="/" style="display: none;">
                     <img src="{{ asset('images/logo.png') }}" width="50px" alt="logo" class="logo">
                 </a>

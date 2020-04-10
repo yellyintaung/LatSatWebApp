@@ -1,7 +1,7 @@
 @extends('frontend.master')
 @push('css')
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-
+{{-- <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@700&display=swap" rel="stylesheet"> --}}
 <style>
     /* .animate {
         margin-right: 0.5rem !important
