@@ -45,7 +45,9 @@ class FrontendController extends Controller
         public function index()
         {
             $product = Product::all();
+            $townships = Township::all();
             return view('frontend.index')->with('product',$product)
+            ->with('townships',$townships)
             ->with('menu_categories',$this->menu_categories);
         }
         

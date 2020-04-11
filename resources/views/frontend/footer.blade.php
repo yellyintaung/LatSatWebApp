@@ -5,7 +5,10 @@
             <a href="/" class="lasat-about"><img src="/images/logo.png" alt="logo" width="45px" />
                     <span class="logotext pl-2">ဝန်ဆောင်မှုပေးနေသော မြို့နယ်များ</span></a> 
                     <p class="pt-2 fan text-justy" style="line-height: 2;">
-                      ကျောက်တံတား၊ ပန်းပဲတန်း၊ လသာ၊ ဗိုလ်တစ်ထောင်၊ လမ်းမတော်၊ ပုဇွန်တောင် အစရှိသည့်မြို့နယ်များတွင် ပစ္စည်းရောက်‌ငွေရှင်း စနစ်ဖြင့်မှာယူနိုင်ပါပြီ။
+                      @foreach ($townships as $township)
+                          {{$township->township_name}}၊
+                      @endforeach
+                     အစရှိသည့်မြို့နယ်များတွင် ပစ္စည်းရောက်‌ငွေရှင်း စနစ်ဖြင့်မှာယူနိုင်ပါပြီ။
                    </p>
                 </div>
                 <div class="col-md-4 col-sm-2 pt-3">
