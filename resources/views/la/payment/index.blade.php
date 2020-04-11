@@ -13,6 +13,7 @@
         <tr>
             <th>No</th>
             <th>Customer Name</th>
+            <th>Township</th>
             <th>Delivery Charge</th>
             <th>Total Amount</th>
             <th>Order Date</th>
@@ -36,7 +37,8 @@
         <tr>
             <td> {{ ($tno*10)+$key+1 }} </td>
             <td>{{ $item->pcustomer->name }}</td>
-            <td>{{ $item->delivery_charge }} ကျပ်</td>
+            <td>{{ $item->ptownship->township_name }}</td>
+            <td>{{ $item->ptownship->delivery_cost }} ကျပ်</td>
             <td>{{ $item->total }} ကျပ်</td>
             <td>{{ $item->created_at }}</td>
             <td>{{ $item->want_date }}</td>

@@ -79,17 +79,7 @@
                 </table>
             </div>
             
-            <div class="row">
-                <div class="col-6">
-                    
-                </div>
-                <div class="col-3 pt-2">
-                    <h6 class="info" style="font-size:18px;">ပို့ဆောင်ခ</h6>
-                </div>
-                <div class="col-3 pt-2">
-                    <h6 class="info" style="font-size:18px;position:absolute;"> 650 ကျပ်</h6>
-                </div>
-            </div>
+            
             <div class="row pb-3">
                 <div class="col-6">
                     
@@ -102,7 +92,7 @@
                 </div>
             </div>
             
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-6">
                     
                 </div>
@@ -112,7 +102,7 @@
                 <div class="col-3 pt-2">
                     <h6 class="info" style="font-size:18px;position:absolute;" id="totalPriceDone">{{ $total+650 }}ကျပ်</h6>
                 </div>
-            </div>
+            </div> --}}
             <div class="row pt-5">
                 <div class="col-md-9 col-xs-12 c-shop">
                     <a href="{{ URL::previous() }}" class="btn con-shop">ဝယ်ဦးမယ် >> </a>
@@ -126,24 +116,25 @@
     @endsection
     @push('scripts')
     <script>
-        function calculate(rawId,id,qty,price) {
-            var total = qty*price;
-            console.log("total :"+total);
-            $('.total'+id).html(total);
-            $.ajax({
-                type:'get',
-                url:'/shoppingCartUpdate/'+rawId+'/'+qty,
-                success:function(data){
-                    console.log(data);
-                    $('.total'+id).html(data.item.total);
-                    $('#totalPrice').html(data.total+'ကျပ်');
-                    $('#totalPriceDone').html(data.total+650+'ကျပ်');
-                }
-            });
-        }
-
         
-        $(document).ready(function(){
+        $(document).ready(function(){            
+            function calculate(rawId,id,qty,price) {
+                var total = qty*price;
+                console.log("total :"+total);
+                $('.total'+id).html(total);
+                $.ajax({
+                    type:'get',
+                    url:'/shoppingCartUpdate/'+rawId+'/'+qty,
+                    success:function(data){ 
+                        console.log(data);
+                        $('.total'+id).html(data.item.total);
+                        $('#totalPrice').html(data.total+'ကျပ်');
+                        // $('#totalPriceDone').html(data.total+'ကျပ်');
+                    }
+                });
+            }
+            
+            
             $('.btn-minus').click(function(){
                 var id=$(this).data("id");
                 var rawId=$(this).data("rawid");

@@ -19,7 +19,7 @@
 
         <div class="col-md-4">
             <label>Township:</label>
-            <input type="text" class="form-control form-control-sm" value="{{ $payment->township }}" readonly>
+            <input type="text" class="form-control form-control-sm" value="{{ $payment->ptownship->township_name }}" readonly>
         </div>
     </div>
     
@@ -33,7 +33,7 @@
     <div class="row mb-3">
         <div class="col-md-4">
             <label>Delivery Charges:</label>
-            <input type="text" class="form-control form-control-sm" value="{{ $payment->delivery_charge }} ကျပ်" readonly>
+            <input type="text" class="form-control form-control-sm" value="{{ $payment->ptownship->delivery_cost }} ကျပ်" readonly>
         </div>
         <div class="col-md-4">
             <label>Total Amount:</label>

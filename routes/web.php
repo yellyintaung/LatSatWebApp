@@ -51,6 +51,8 @@ Route::get('/clear_user',function(){
     echo "<h3> Session Clear! </h3>";
 });
 
+Route::get('/get_delivery/{id}','FrontendController@getDelivery');
+
 Route::get('/clear',function(){
     Artisan::call("cache:clear");
     Artisan::call("config:cache");

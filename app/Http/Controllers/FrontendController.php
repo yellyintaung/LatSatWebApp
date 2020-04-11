@@ -11,6 +11,7 @@ use App\Payment;
 use App\Order;
 use App\Customer;
 use App\User;
+use App\Township;
 use Session;
 use ShoppingCart;
 use Hash;
@@ -81,9 +82,12 @@ class FrontendController extends Controller
             
             $total = ShoppingCart::total();
             
+            $townships = Township::all();
+            
             return view('frontend.shopping_cart')->with('cart',$cart)
             ->with('rows',$rows)
             ->with('total',$total)
+            ->with('townships',$townships)
             ->with('menu_categories',$this->menu_categories);
         }
         
@@ -106,9 +110,10 @@ class FrontendController extends Controller
         
         public function checkoutView()
         {
-            
+            $townships = Township::all();
             $total = ShoppingCart::total();
             return view('frontend.checkout')->with('total',$total)
+            ->with('townships',$townships)
             ->with('menu_categories',$this->menu_categories);
         }
         
@@ -133,9 +138,8 @@ class FrontendController extends Controller
             
             $payment = new Payment();
             $payment->customer_id= Session::get('customer_id');
-            $payment->total = ShoppingCart::total()+650;
-            $payment->delivery_charge = 650;
-            $payment->township = $request->township;
+            $payment->total = $request->total_price;
+            $payment->township_id = $request->township_id;
             $payment->address = $request->address;
             $payment->want_date = $request->want_date;
             $payment->time = $request->time;
@@ -222,5 +226,12 @@ class FrontendController extends Controller
         public function useraccCheck()
         {
             return view('frontend.user_check')->with('menu_categories',$this->menu_categories);
+        }
+        
+        public function getDelivery($id)
+        {
+            $total = ShoppingCart::total();
+            $township = Township::where('id',$id)->get();
+            return response()->json(['success'=>true,'townships'=>$township,"total"=>$total]);
         }
     }

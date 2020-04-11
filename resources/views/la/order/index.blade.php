@@ -14,9 +14,9 @@
             <th>No</th>
             <th>Customer Name</th>
             <th>Product</th>
-            <th>Quantity</th>
-            <th>Price per each</th>
             <th>Type Name</th>
+            <th>Price per each</th>
+            <th>Quantity</th>
             <th>Amount</th>
             <th>Delivery</th>
             <th>Actions</th>
@@ -37,9 +37,9 @@
             <td> {{ ($cno*10)+$key+1 }} </td>
             <td>{{ $item->payment->pcustomer->name }}</td>
             <td>{{ $item->product->product_name }}</td>
-            <td>{{ $item->quantity }}</td>
-            <td>{{ $item->pricepereach }} ကျပ်</td>
             <td>{{ $item->type }}</td>
+            <td>{{ $item->pricepereach }} ကျပ်</td>
+            <td>{{ $item->quantity }}</td>
             <td>{{ $item->total_amount }} ကျပ်</td>
             <td >
                 @if ($item->status == 1 )

@@ -480,5 +480,8 @@ span.count {
     display: inline !important;
     font-size: 15px;
   }
+  .mob-ck{
+    padding-top: 10px;
+  }
 }
 /* color code - #32B34A */
