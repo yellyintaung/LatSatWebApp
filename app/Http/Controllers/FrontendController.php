@@ -36,18 +36,20 @@ class FrontendController extends Controller
         */
         
         public  $menu_categories;
+        public  $townships;
+        
         public function __construct()
         {
             //   $this->middleware('auth');
             $this->menu_categories = Category::all();
-            //    dd($this->menu_categories);
+            $this->townships       = Township::all();
+            //    dd($this->townships);
         }
         public function index()
         {
             $product = Product::all();
-            $townships = Township::all();
             return view('frontend.index')->with('product',$product)
-            ->with('townships',$townships)
+            ->with('townships',$this->townships)
             ->with('menu_categories',$this->menu_categories);
         }
         
@@ -56,12 +58,14 @@ class FrontendController extends Controller
             $category = category::find($id);
             // dd($category->category);
             return view('frontend.product')->with('category',$category)
+            ->with('townships',$this->townships)
             ->with('menu_categories',$this->menu_categories);
         }
         
         public function product_detail($id) {
             $product = Product::find($id);
             return view('frontend.product_detail')->with('product',$product)
+            ->with('townships',$this->townships)
             ->with('menu_categories',$this->menu_categories);
         }
         
@@ -84,12 +88,13 @@ class FrontendController extends Controller
             
             $total = ShoppingCart::total();
             
-            $townships = Township::all();
+            // $townships = Township::all();
             
             return view('frontend.shopping_cart')->with('cart',$cart)
             ->with('rows',$rows)
             ->with('total',$total)
-            ->with('townships',$townships)
+            // ->with('townships',$townships)
+            ->with('townships',$this->townships)
             ->with('menu_categories',$this->menu_categories);
         }
         
@@ -112,10 +117,11 @@ class FrontendController extends Controller
         
         public function checkoutView()
         {
-            $townships = Township::all();
+            // $townships = Township::all();
             $total = ShoppingCart::total();
             return view('frontend.checkout')->with('total',$total)
-            ->with('townships',$townships)
+            // ->with('townships',$townships)
+            ->with('townships',$this->townships)
             ->with('menu_categories',$this->menu_categories);
         }
         
@@ -166,7 +172,9 @@ class FrontendController extends Controller
         
         public function userLogin()
         {
-            return view('frontend.user_login')->with('menu_categories',$this->menu_categories);
+            return view('frontend.user_login')
+            ->with('townships',$this->townships)
+            ->with('menu_categories',$this->menu_categories);
         }
         
         public function login(Request $req){
@@ -178,18 +186,19 @@ class FrontendController extends Controller
                     Session::put('customer_id',$customer->id);
                 }
                 if($sc->count()<>0){
-                    return redirect('/showShoppingCartview')->with('menu_categories',$this->menu_categories);
+                    return redirect('/showShoppingCartview');
                 }else
-                return redirect('/')->with('menu_categories',$this->menu_categories);
+                return redirect('/');
             }else{
                 Session::put('customer_id',null);
-                return redirect('/user_login')->with('menu_categories',$this->menu_categories);
+                return redirect('/user_login');
             }
         }
         
         public function userRegister()
         {
-            return view('frontend.user_register')->with('menu_categories',$this->menu_categories);
+            return view('frontend.user_register')->with('menu_categories',$this->menu_categories)
+            ->with('townships',$this->townships);
         }
         
         public function register(Request $request)
@@ -227,7 +236,8 @@ class FrontendController extends Controller
         
         public function useraccCheck()
         {
-            return view('frontend.user_check')->with('menu_categories',$this->menu_categories);
+            return view('frontend.user_check')->with('townships',$this->townships)
+            ->with('menu_categories',$this->menu_categories);
         }
         
         public function getDelivery($id)
