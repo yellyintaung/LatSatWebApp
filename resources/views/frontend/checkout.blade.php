@@ -144,11 +144,9 @@
                            
                             $.each(data.townships, function(index,value) {
                                 $('.child_id').append('<option value='+value.id+'>'+value.delivery_cost+' ကျပ်'+'</option>');
-
                                 var total = data.total+value.delivery_cost;
-                                $('.totalPrice').html('<option value='+total+'>'+total+' ကျပ်'+'</option>');
-                                // $('.totalPrice').html(data.total+value.delivery_cost+'ကျပ်');
-                                // $('.totalPrice').html('<input type="text" name="total_price" value='+data.total+value.delivery_cost+'>');
+                                $('.totalPrice').html(` 
+                                <option value=${total}>${total} ကျပ်</option>`);
                             });
                             
                         }

@@ -17,6 +17,7 @@ class CreateTownshipsTable extends Migration
             $table->bigIncrements('id');
             $table->string('township_name');
             $table->double('delivery_cost',12,2);
+            $table->integer('t_status')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

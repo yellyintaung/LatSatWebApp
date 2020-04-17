@@ -14,6 +14,7 @@
             <th>No</th>
             <th>township Name</th>
             <th>Delivery Cost</th>
+            <th>Service Info</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -32,6 +33,19 @@
             <td> {{ ($tno*10)+$key+1 }} </td>
             <td>{{ $township->township_name }}</td>
             <td>{{ $township->delivery_cost }} ကျပ်</td>
+
+            <td >
+                @if ($township->t_status == 0 )
+                <label class="font-weight-bold btn-sm btn-light text-success active text-center" style="width:80%;">
+                    Service
+                </label>
+                @else
+                <label class="font-weight-bold btn-sm btn-light text-danger active text-center" style="width:80%;">
+                    Not Yet
+                </label>
+                @endif
+            </td>
+
             <td>
                 <a href="/admin/township/{{ $township->id }}" class="btn btn-sm" style="background-color:#007BFF;color:white;">View</a>
                 

@@ -88,7 +88,13 @@ class PaymentController extends Controller
     public function destroy($id)
     {
         $payment = Payment::find($id);
-        $payment->delete();
-        return redirect('/admin/payment');
+
+        if(count($payment->porder)==0){
+            $payment->delete();
+            return redirect('/admin/payment');
+            }
+            else{
+                return redirect('/admin/payment')->with('alert', 'ယခု‌ Paymentနဲ့ဆိုင်တဲ့ Order listကိုအရင်ဖျက်ပါ!');
+            }
     }
 }

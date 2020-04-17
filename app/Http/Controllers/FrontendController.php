@@ -42,7 +42,7 @@ class FrontendController extends Controller
         {
             //   $this->middleware('auth');
             $this->menu_categories = Category::all();
-            $this->townships       = Township::all();
+            $this->townships       = Township::where('t_status',0)->get();
             //    dd($this->townships);
         }
         public function index()

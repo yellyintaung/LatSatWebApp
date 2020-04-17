@@ -30,6 +30,33 @@
                 </div>
             </div>
         </div>
+
+        <div class="form-group">
+            <label for="">Service Info :</label>
+            <div class="form-check">
+                <label class="form-check-label" style="width:100%;">
+                    <div class="row">
+                        <div class="col-md-1">
+                            @if ($township->t_status == 0 )
+                            <input type="radio" class="form-check-input ml-5" name="t_status" id="yes" value="0" checked> Service 
+                            @else
+                            <input type="radio" class="form-check-input ml-5" name="t_status" id="yes" value="0"> Service
+                            @endif
+                        </div>
+                        
+                        <div class="col-md-11">
+                            @if ($township->t_status == 1 )
+                            <input type="radio" class="form-check-input ml-5" name="t_status" id="no" value="1" checked>
+                            Not Yet
+                            @else
+                            <input type="radio" class="form-check-input ml-5" name="t_status" id="no" value="1">
+                            Not Yet
+                            @endif
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-12">

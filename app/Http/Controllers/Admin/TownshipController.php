@@ -80,6 +80,7 @@ class TownshipController extends Controller
         $township = Township::find($id);
         $township->township_name = $request->township_name;
         $township->delivery_cost = $request->delivery_cost;
+        $township->t_status = $request->t_status;
         $township->save();
         return redirect('/admin/township');
     }

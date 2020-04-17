@@ -19,4 +19,7 @@ class Payment extends Model
     {
         return $this->belongsTo('App\Township', 'township_id');
     }
+    public function porder(){
+        return $this->hasMany('App\Order', 'payment_id');
+    }
 }
