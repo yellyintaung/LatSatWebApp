@@ -82,33 +82,36 @@
                             </span>
                         </a>
                     </li>
-                    
-                    @if(Session::get('customer')<>null)
 
-                    <li class="nav-item latsat-nav-pd">
-                        <a class="nav-link latsat-nav" href="/order_history">Order History</a>
-                    </li>
 
                     <li class="nav-item latsat-nav-pd"> 
-                        
+                        @if(Session::get('customer')<>null)
                         <a class="nav-link latsat-nav dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                             <span class="">{{str_limit(Session::get('customer'),4)}}</span>
                         </a>
                         <!-- Dropdown -->
                         <div class="dropdown-menu latsat-dropdown">
+                            @if (Session::get('cp')->count() <> 0)
+                            <a class="dropdown-item" href="/order_history">Order History</a>
+                            @else
+                            <a class="dropdown-item" href="/">Order History</a>
+                            @endif
+                            
+                            
+                           
                             <a class="dropdown-item" href="/user_logout"> Logout </a>
                         </div>
-                    </li>
-                    @else
-                    <li class="nav-item latsat-nav-pd"> 
+                         @else
+          
                         <a class="nav-link latsat-nav mob-login" href="/useracc_check">
                             <img src="{{ asset('images/user.png') }}" 
                             width="24px" class="mb-img"/>&nbsp;
                             <span class="mb-lg">Login</span>
                         </a>
                         
-                    </li>
+                    
                     @endif
+                </li>
                 </ul>
             </div>
         </div>
