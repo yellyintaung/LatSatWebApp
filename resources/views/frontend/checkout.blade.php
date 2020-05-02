@@ -35,7 +35,7 @@
                     }
                     //ssssss
                     
-                    if($AMPM=='PM' && $mmTime>=4 && $minute>00){
+                    if($AMPM=='PM' && $mmTime>=6 && $minute>00){
                         $day1 = date('d-m-Y', strtotime($Date. ' + 2 days'));
                         $day2 = date('d-m-Y', strtotime($Date. ' + 3 days'));
                     }else{

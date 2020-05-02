@@ -27,6 +27,7 @@ Route::post('/shoppingCartdelete', 'FrontendController@trash');
 
 Route::get('/shoppingCartUpdate/{rawId}/{qty}', 'FrontendController@update');
 
+
 Route::get('/showCheckoutview', 'FrontendController@checkoutView');
 
 Route::post('/placeOrder', 'FrontendController@placeOrder');
@@ -44,6 +45,9 @@ Route::get('/user_logout','FrontendController@logout');
 
 
 Route::get('/check_user','FrontendController@checkUser');
+Route::get('/order_history','FrontendController@orderHistroy');
+
+Route::get('/orderUpdate/{total}', 'FrontendController@orderUpdate');
 
 Route::get('/clear_user',function(){
     Session::forget('customer');

@@ -9,4 +9,8 @@ class Customer extends Model
 {
     use SoftDeletes;
     protected $dates = ['deleted_at'];
+
+    public function porder(){
+        return $this->hasMany('App\Payment', 'customer_id');
+    }
 }

@@ -246,4 +246,19 @@ class FrontendController extends Controller
             $township = Township::where('id',$id)->get();
             return response()->json(['success'=>true,'townships'=>$township,"total"=>$total]);
         }
+        
+        public function orderHistroy(){
+            $user = Session::get('customer_id');
+            $customer = Customer::where('id',$user)->get();
+            
+            foreach($customer as $cu){
+                $cpayment = Payment::where('customer_id',$cu->id)->orderBy('created_at', 'desc')->first();
+            }
+            return view('frontend.order_history')->with('cpayment',$cpayment)
+            ->with('townships',$this->townships)
+            ->with('menu_categories',$this->menu_categories);
+        }
+      
+       
+       
     }

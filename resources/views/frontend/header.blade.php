@@ -83,8 +83,14 @@
                         </a>
                     </li>
                     
+                    @if(Session::get('customer')<>null)
+
+                    <li class="nav-item latsat-nav-pd">
+                        <a class="nav-link latsat-nav" href="/order_history">Order History</a>
+                    </li>
+
                     <li class="nav-item latsat-nav-pd"> 
-                        @if(Session::get('customer')<>null)
+                        
                         <a class="nav-link latsat-nav dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                             <span class="">{{str_limit(Session::get('customer'),4)}}</span>
                         </a>
@@ -92,15 +98,17 @@
                         <div class="dropdown-menu latsat-dropdown">
                             <a class="dropdown-item" href="/user_logout"> Logout </a>
                         </div>
-                        
-                        @else
+                    </li>
+                    @else
+                    <li class="nav-item latsat-nav-pd"> 
                         <a class="nav-link latsat-nav mob-login" href="/useracc_check">
                             <img src="{{ asset('images/user.png') }}" 
                             width="24px" class="mb-img"/>&nbsp;
                             <span class="mb-lg">Login</span>
                         </a>
-                        @endif
+                        
                     </li>
+                    @endif
                 </ul>
             </div>
         </div>
