@@ -91,12 +91,8 @@
                         </a>
                         <!-- Dropdown -->
                         <div class="dropdown-menu latsat-dropdown">
-                            @if (Session::get('cp')->count() <> 0)
+                 
                             <a class="dropdown-item" href="/order_history">Order History</a>
-                            @else
-                            <a class="dropdown-item" href="/">Order History</a>
-                            @endif
-                            
                             
                            
                             <a class="dropdown-item" href="/user_logout"> Logout </a>

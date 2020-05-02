@@ -253,11 +253,23 @@ class FrontendController extends Controller
             
             foreach($customer as $cu){
                 $cpayment = Payment::where('customer_id',$cu->id)->orderBy('created_at', 'desc')->first();
+
+                
             }
+
             Session::put('cp',$cpayment);
+
+            $cp = Session::get('cp');
+
+            // dd($cpayment->id);
+           if($cp<> null){
             return view('frontend.order_history')->with('cpayment',$cpayment)
             ->with('townships',$this->townships)
             ->with('menu_categories',$this->menu_categories);
+           }else{
+               return redirect('/');
+           }
+            
         }
       
        
